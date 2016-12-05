@@ -1,0 +1,63 @@
+// Sample customizations collector;
+// please use only with AlmaDL-journalStyleSheet.scss;
+// make (and invoke) a specific file for each journal;
+
+// journal Title
+$journal-title:		Test Title;	// please avoid special characters
+$subversion:		0;	// a subversion number if you need to keep track of changes
+
+// import Google Fonts (or insert here the code to import your fonts)
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700'); // optional font Serif for titles
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic');
+
+// Fonts Definitions
+$font-titles:			'Roboto Slab', serif !important;
+$font-body:				'Open Sans', sans-serif;
+$font-content-size:		0.9em;	// if a smaller font is used, consider changing this to 1em
+
+
+// Colors Definitions
+$body-color:			#ffffff;	// background body color
+$font-color:			#575756;	// font color of body etc
+$a-color:				#A63642;	// main theme color for links
+$header-color:			$a-color;
+// background header color, you can choose to use $a-color (default) or $body-color or you can set a custom color
+
+// Secondary (optional) Colors
+$header-font-color:		null;		// if not defined it will use $a-color (if $header-color == $body-color) or else $font-color
+$a-hoover-color:		null;		// for a:hover and a:active; if not defined it will use $a-color
+$button-color:			null;		// if not defined it will use $a-color
+
+
+// Header Position
+$header-centered:		false;		// header centered, could be "true" or "false" (left aligned)
+
+// Textual or Image based headerTitle
+$header-textual:		true;		// header based on image or text; could be "true" (textual) or "false" (image)
+
+// Image in Home
+$home-image:			false;		// if set to "true" will load the rules for an image in home (with caption); see Readme for HTML
+
+// Issue Cover
+$issue-cover-main:		false;		// if set to "true" will load the rules for a responsive issue cover before the index
+$issue-cover-archive:	false;		// if set to "true" will load the rules for a responsive issue cover in the archive
+$issue-cover-size:		650px;		// set this value if a bigger cover is provided (please ensure consistency in the cover quality)
+
+// Workflow
+$only-publication:		false;		// if set to "true" will hide the "workflow schema" and the "Online submissions" links from the "About"
+
+// Double Publisher
+$double-publisher:		false;
+// if set to "true" will hide the "Sponsor" group; that is a useful workaround if you have more than one publisher (and you will list the second one both in the description of the Publisher and as a Sponsoring organization; see Readme for more info
+
+$sponsor:				false;
+// if the journal has only publishers (1 or more) but no sponsoring organization or supporting institutions > this is a small fix for you
+
+//
+//	Custom Rules (they will appear at the bottom of the CSS)
+//
+@mixin customizations {
+	.test {
+		display: none;
+	}
+}

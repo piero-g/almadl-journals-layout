@@ -1,0 +1,711 @@
+// WARNING: some customization may not apply to the default OJS installation, see Readme
+@import 'journalTest';
+
+/*! 
+
+AlmaDL Responsive Layout for Journals, OJS 2.4.X
+#{$journal-title}
+License: Creative Commons BY 4.0
+Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
+Based on version 0.9.6-8
+Subversion n.: #{$subversion}
+
+*/
+
+// breakpoints!
+$break-small:	26.75em;
+$break-medium:	48.00em;
+
+body {
+	font-family: $font-body;
+	color: $font-color;
+	background-color: $body-color;
+}
+ h1, h2, h3, h4, h5, h6 {
+	font-family: $font-titles;
+}
+
+
+/* HEADER */
+#headerTitle {
+	@if $header-color == $a-color {
+		/* header use main theme color */
+	} @else if $header-color == $body-color {
+		/* header use background body color */
+	} @else {
+		/* header use a custom color */
+	}
+	background-color: $header-color;
+	@if $header-textual == true {
+		/* textual header */
+		padding: 20px 0;
+	} @else {
+		padding: 10px 0;
+	}
+}
+@if $header-textual == true {
+	@media (min-width: $break-small) {
+		#headerTitle {
+			/* textual header */
+			padding: 1.7em 0;
+		}
+	}
+} @else {
+	@media (min-width: $break-medium) {
+		#headerTitle {
+			padding: 0;
+		}
+	}
+}
+/* textual header */
+#header h1 {
+	@if $header-font-color != null {
+		/* specific color */
+		color: $header-font-color;
+	} @else if $header-color == $body-color {
+		/* main theme color */
+		color: $a-color;
+	} @else {
+		color: $body-color;
+	}
+	padding: 0 2%;
+	@if $header-centered == true {
+		/* centered header */
+		text-align: center;
+	} @else { }
+}
+@media (min-width: $break-medium) {
+	#header h1 {
+		padding: 0 10%;
+	}
+}
+/* header img - custom media queries depending on img size (tablet & co) */
+#header h1 img {
+	height: auto;
+	width: 100%;
+}
+@media (orientation:landscape) {
+	#header h1 img {
+		/* based on img size, usually a good value */
+		width: 50%;
+	}
+}
+@media (min-width: $break-small) {
+	#header h1 img {
+		/* only for non-banner img */
+		max-width: 428px;
+	}
+}
+@media (min-width: $break-medium) {
+	#header h1 img {
+		/* based on img size */
+		max-width: 700px;
+		/* based on img size, usually a good value */
+		width: 50%;
+	}
+}
+
+
+/* HEADINGS */
+h1, h2 {
+	font-weight: 700 !important;
+}
+#content h2 {
+	font-size: 1.8em;
+}
+#content h3 {
+	font-size: 1.5em;
+}
+#content h4 {
+	font-size: 1.3em;
+	padding-top: 0.75em;
+}
+#content h5 {
+	font-size: 1.15em;
+}
+#articleTitle h3 {
+	font-weight: 700;
+}
+/* margin for masthead profiles in separate pages */
+#displayMembership h4 {
+	margin-bottom: 1.8em;
+}
+
+
+/* CONTAINERS */
+#container {
+	margin: 0 auto;
+	min-width: 300px !important;
+	max-width: 2000px !important;
+}
+#content {
+	border-top: 1px dotted #000;
+	font-size: $font-content-size;
+}
+/* body responsive */
+#main {
+	margin-left: 2%;
+	margin-right: 2%;
+	width: 96%;
+}
+#rightSidebar {
+	display: none;
+}
+@media (min-width: $break-small) {
+	#main {
+		margin-right: 0;
+		width: 74%;
+	}
+	#rightSidebar {
+		display: block;
+		margin-left: 1%;
+		margin-right: 2%;
+		width: 20%;
+	}
+}
+@media (min-width: $break-medium) {
+	#main {
+		margin-left: 10%;
+		width: 63%;
+	}
+	#rightSidebar {
+		margin-left: 2%;
+		margin-right: 10%;
+		width: 14%;
+	}
+}
+/* end of body responsive */
+
+
+/* NAVBAR */
+#navbar {
+	border-bottom: 1px dotted #000;
+}
+ul.menu {
+	font-size: 1.2em;
+	text-align: center;
+}
+ul.menu li {
+	padding: 0;
+}
+ul.menu a {
+	line-height: 2em;
+	padding: 0.5em 0.75em;
+}
+@media (min-width: $break-medium) {
+	ul.menu {
+		text-align: left;
+	}
+	ul.menu a {
+		line-height: 1em;
+		padding: 0;
+	}
+	ul.menu li {
+		padding: 0 1.5em 0 0;
+	}
+}
+
+
+/* LINKS */
+a, a:link, a:visited {
+	color: $a-color;
+	text-decoration: none;
+}
+a:active, a:hover {
+	background: none;
+	text-decoration: underline;
+	@if $a-hoover-color != null {
+		/* specific color */
+		color: $a-hoover-color;
+	} @else {
+		color: $a-color;
+	}
+}
+/* navbar and breadcrumb coherence */
+ul.menu a:active, ul.menu a:hover {
+	text-decoration: underline;
+}
+#breadcrumb a:active, #breadcrumb a:hover {
+	text-decoration: underline;
+}
+/* links in paragraphs */
+p a {
+	display: inline-block;
+	margin: 0.5em 0;
+}
+@media (min-width: $break-medium) {
+	p a {
+		display: inline;
+		margin: 0;
+	}
+}
+
+
+/* LISTS */
+ul {
+	padding: 0 0 0 1.1em;
+}
+@media (min-width: $break-medium) {
+	ul {
+		padding: 0 0 0 2.5em;
+	}
+}
+li {
+	margin: 1em 0;
+}
+@media (min-width: $break-medium) {
+	li {
+		margin: 0;
+	}
+}
+
+
+/* ISSUE TOC */
+table.tocArticle {
+	margin-bottom: 9px;
+}
+.tocArticleTitleAuthors {
+	width: 70%;
+}
+.tocArticleGalleysPages {
+	width: 30%;
+}
+@media (min-width: $break-medium) {
+	.tocArticleTitleAuthors {
+		width: 80%;
+	}
+	.tocArticleGalleysPages {
+		width: 20%;
+	}
+}
+.tocAuthors {
+	font-style: italic;
+}
+/* multiple galleys */
+.tocGalleys a {
+	clear: right;
+	float: right;
+	margin-bottom: 9px;
+}
+.tocPages {
+	clear: both;
+}
+@media (min-width: $break-medium) {
+	.tocGalleys a {
+		margin-bottom: 0;
+	}
+}
+
+
+/* FULLTEXT HTML */
+#articleContent {
+	margin: 0 2%;
+}
+#articleBody {
+	text-align: justify;
+}
+#articleFooter {
+	font-size: small;
+	margin-top: 5%;
+}
+#articleTitle h1 {
+	font-size: 1.5em;
+	font-weight: normal;
+	margin: 0 1em 0.25em 0;
+	padding-top: 0.75em;
+}
+/* 1200px */
+@media (min-width: 75.00em) {
+	#articleBody {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+		-moz-column-gap: 1.5em;
+		-webkit-column-gap: 1.5em;
+		column-gap: 1.5em;
+	}
+}
+
+// REMOVALS
+@if $only-publication == true {
+	/* REMOVALS */
+	/* hide OJS internal workflow schema */
+	#pkp-about-aboutThisPublishingSystem #content > p:nth-child(2) {
+		display: none;
+	}
+	/* if online submission disabled */
+	#onlineSubmissions, #aboutSubmissions li:first-child, li#linkDisableUserReg {
+		display: none;
+	}
+} @else { }
+
+
+/* SIDEBAR */
+#sidebar input.button {
+	margin-top: 9px;
+}
+@media (min-width: $break-medium) {
+	#sidebar input.button {
+		margin-top: 0;
+	}
+}
+#sidebar div.block {
+	font-size: 1.1em;
+	padding-left: 5px;
+}
+/* inverse media query to avoid use of "unset" or "intial" properties */
+@media (max-width: 43.63em) {
+	#sidebar input.textField, #sidebar select.selectMenu, #sidebar input.button {
+		width: 100%;
+	}
+}
+
+/* sidebar link spacing */
+#sidebar a {
+	display: inline-block;
+	margin: 0.5em 0;
+}
+.articleToolItem {
+	margin-bottom: 16px;
+}
+#sidebarAnnouncementFeed a, #sidebarWebFeed a {
+	margin-bottom: 5px;
+}
+@media (min-width: $break-medium) {
+	#sidebar a {
+		display: inline;
+		margin: 0;
+	}
+	.articleToolItem {
+		margin-bottom: 3px;
+	}
+	#sidebarAnnouncementFeed a, #sidebarArticleFeed a {
+		margin-bottom: 0;
+	}
+}
+
+/* articleTools + authorBios */
+#sidebarRTArticleTools, #sidebarRTAuthorBios {
+	border-left: 2px solid $a-color;
+}
+#sidebar .articleToolItem a {
+	display: inline;
+}
+.articleToolIcon {
+	float: right;
+	padding-left: 2px;
+	padding-right: 0;
+}
+@media (min-width: $break-medium) {
+	.articleToolIcon {
+		float: none;
+		padding-left: 0;
+		padding-right: 5px;
+	}
+}
+
+/* mendeley icon (exception to default values) */
+#sidebar .articleToolItem a.mendeleyIcon {
+	display: block;
+	float: left;
+	padding: 0 0 1em;
+	width: 100%;
+}
+@media (min-width: $break-medium) {
+	#sidebar .articleToolItem a.mendeleyIcon {
+		float: none;
+		padding: 1em 0.3em 0;
+		width: 0;
+	}
+}
+@media (min-width: 83.50em) {
+	#sidebar .articleToolItem a.mendeleyIcon {
+			display: inline;
+			padding: 5px 9px;
+	}
+}
+
+/* centered keyword cloud */
+#sidebarKeywordCloud {
+	display: none;
+	text-align: center;
+}
+#sidebarKeywordCloud span.blockTitle {
+	text-align: left;
+}
+@media (min-width: $break-medium) {
+	#sidebarKeywordCloud {
+		display: block;
+	}
+}
+
+/* font sizer */
+#sidebarFontSize {
+	display: none;
+}
+#sidebarFontSize + br {
+	display: none;
+}
+#sizer a {
+	margin-left: 8px;
+	margin-right: 4px;
+}
+@media (min-width: $break-medium) {
+	#sidebarFontSize {
+		display: block;
+	}
+	#sidebarFontSize + br {
+		display: inline;
+	}
+}
+
+
+/* VARIOUS */
+input.defaultButton {
+	@if $button-color != null {
+		/* specific color */
+		background-color: $button-color;
+	} @else {
+		background-color: $a-color;
+	}
+	color: #fff;
+}
+#footer {
+	background: none;
+	border-top: 1px dotted #000;
+	padding-top: 3px;
+	font-size: 0.7em;
+	text-align: left;
+	margin-top: 20px;
+}
+#footer .privacy {
+	float: right;
+}
+@media (min-width: $break-medium) {
+	#footer .privacy {
+		float: none;
+		padding-left: 2em;
+	}
+}
+
+/* footer logos */
+.footerLogo {
+	float: right;
+	padding-left: 2px;
+}
+.footerLogo img {
+	height: auto;
+	width: 50px;
+}
+
+/* hide intro reserved for AlmaDL index */
+body#pkp-common-openJournalSystems #journalDescription {
+	display: none;
+}
+.small-caps {
+	font-variant: small-caps;
+}
+
+#journalLayout table {
+	font-size: 0.7em;
+}
+
+// double publisher trick
+@if $double-publisher == true {
+	/* fix for double publisher */
+	body#pkp-about-journalSponsorship #publisher p:last-child {
+		display: none;
+	}
+} @else { }
+@if $sponsor == true { } @else {
+	body#pkp-about-journalSponsorship .separator {
+		display: none;
+	}
+}
+
+/* justify texts */
+body div#content p, body div#content ol, body div#content ul, #articleAbstract div {
+	text-align: left;
+}
+@media (min-width: $break-small) {
+	body div#content p, body div#content ol, body div#content ul, #articleAbstract div {
+		text-align: justify;
+	}
+}
+#footer p {
+	text-align: left !important;
+}
+
+/* blockquote */
+blockquote {
+	font-size: 0.9em;
+}
+
+/* popup style (help + RT) */
+div#top + div#sidebar {
+	margin-right: 0 !important;
+}
+body[id^="pkp-rt"] #top+#main, body[id^="pkp-bio"] #top+#main {
+	margin: 0 2%;
+	width: 96%
+}
+body[id^="pkp-rt"] #headerTitle, body[id^="pkp-bio"] #headerTitle {
+	padding: 1em 0;
+}
+#profilePicContent {
+	margin: 0 0 1em 1em;
+}
+#helpToc span.blockTitle {
+	color: $a-color;
+}
+
+/* link index */
+a[href*="searchInitial"], a[href*="issuesPage"], a[href*="searchPage"] {
+	line-height: 2em;
+	padding: 0 1em;
+	text-align: center;
+}
+#pkp-search-authorIndex #content a {
+	line-height: 2em;
+}
+@media (min-width: $break-medium) {
+	a[href*="searchInitial"], a[href*="issuesPage"] {
+		line-height: 1em;
+		padding: 0;
+		text-align: left;
+	}
+	#pkp-search-authorIndex #content a {
+		line-height: 1em;
+	}
+}
+
+/* home */
+#additionalHomeContent a {
+		line-height: 2em;
+	}
+@media (min-width: $break-medium) {
+	#additionalHomeContent a {
+		line-height: 1em;
+	}
+}
+#additionalHomeContent {
+	padding-bottom: 2em;
+}
+#additionalHomeContent + br {
+	clear: both;
+}
+
+// if Home Image
+@if $home-image == true {
+	/* home with image */
+	.homeImage {
+		float: none;
+		height: auto;
+		max-width: 100%;
+		padding: 0 25px 5px 25px;
+	}
+	@media (min-width: $break-small) {
+		.homeImage {
+			float: left;
+			max-width: 50%;
+			padding: 0 5px 5px 0;
+		}
+	}
+	@media (min-width: $break-medium) {
+		.homeImage {
+			padding: 0 1.5em 1.5em 0;
+		}
+	}
+	.homeImage img {
+		height: auto;
+		width: 100%;
+	}
+	.homeImage p {
+		font-size: 0.9em;
+		font-style: italic;
+		margin-top: 0;
+	}
+} @else { }
+
+/* small-screen spacing */
+#journalDescription + br {
+	display: none;
+}
+#content #topBar {
+	display: none;
+}
+@media (min-width: $break-medium) {
+	#journalDescription + br {
+		display: inline;
+	}
+	#content #topBar {
+		display: block;
+	}
+}
+
+/* announcements */
+table.announcements td.title {
+	width: 100%;
+}
+table.announcements td.title h4 {
+	font-size: 1.5em !important;
+}
+table.announcements tr.details td.more {
+	font-size: 1.5em;
+	width: 30%;
+}
+
+// issue cover
+@if $issue-cover-main == true {
+	/* issueCoverImage (id = main; class = thumb) */
+	#issueCoverImage img {
+		/* body color */
+		border: 1px solid $font-color;
+		height: auto;
+		/* defined per journal */
+		max-width: $issue-cover-size;
+		width: 99%;
+	}
+	#issueCoverDescription {
+		font-size: 0.9em;
+		/* defined per journal */
+		max-width: $issue-cover-size;
+		width: 99%;
+	}
+	/*@media (min-width: $break-medium) {
+		#issueCoverImage img, #issueCoverDescription {
+			width: 80%;
+		}
+	}*/
+} @else { }
+@if $issue-cover-archive == true {
+	.issueCoverImage img {
+		/* body color */
+		border: 1px solid $font-color;
+	}
+	.issueCoverDescription {
+		font-size: 0.7em;
+	}
+	/* fix title alignment in Archive when Cover */
+	#pkp-archive-archives #issues h4 {
+		margin-left: 115px;
+	}
+} @else { }
+
+/* galley page */
+#pdfCanvasContainer iframe {
+	min-height: 700px !important;
+}
+
+/* issue DOI (custom) */
+.doi-issue {
+	font-size: 0.8em;
+	float: right;
+}
+
+/* show identifyType */
+div.identifyType {
+	display: block;
+}
+
+@include customizations;
