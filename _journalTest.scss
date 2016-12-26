@@ -29,11 +29,10 @@ $a-hoover-color:		null;		// for a:hover and a:active; if not defined it will use
 $button-color:			null;		// if not defined it will use $a-color
 
 
-// Header Position
+// Header
 $header-centered:		false;		// header centered, could be "true" or "false" (left aligned)
-
-// Textual or Image based headerTitle
 $header-textual:		true;		// header based on image or text; could be "true" (textual) or "false" (image)
+$header-banner:			false;		// if set to "true" will extend always the header img to full width
 
 // Image in Home
 $home-image:			false;		// if set to "true" will load the rules for an image in home (with caption); see Readme for HTML

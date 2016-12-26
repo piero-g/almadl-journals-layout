@@ -37,7 +37,11 @@ _todo_
 _todo_
 
 ### Header
-_todo_
+Currently there are 3 parameters to set the journal header:
+
+- `$header-centered` is self explanatory: when set to false the header will be aligned to the left
+- `$header-textual` should be used if you haven't an image for the header; currently it implies a better spacing
+- `header-banner` is meant to adjust the spacing of the header when you are using a large image that should extend itself (mostly) at full width
 
 ### Issue Cover
 _todo_
