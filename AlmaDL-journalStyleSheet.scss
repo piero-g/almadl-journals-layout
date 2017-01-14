@@ -364,7 +364,7 @@ table.tocArticle {
 	padding-left: 5px;
 }
 /* inverse media query to avoid use of "unset" or "intial" properties */
-@media (max-width: 43.63em) {
+@media (max-width: ($break-medium - 0.01em)) {
 	#sidebar input.textField, #sidebar select.selectMenu, #sidebar input.button {
 		width: 100%;
 	}
