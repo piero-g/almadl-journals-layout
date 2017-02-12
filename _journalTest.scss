@@ -52,6 +52,9 @@ $double-publisher:		false;
 $sponsor:				false;
 // if the journal has only publishers (1 or more) but no sponsoring organization or supporting institutions > this is a small fix for you
 
+// Other styles
+$clear-style:			false;		// it enables a different style for buttons and forms, more clear and modern; set to "false" to restore the standard OJS style
+
 //
 //	Custom Rules (they will appear at the bottom of the CSS)
 //

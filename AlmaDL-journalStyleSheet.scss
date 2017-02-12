@@ -470,7 +470,28 @@ table.tocArticle {
 }
 
 
-/* VARIOUS */
+/* FORMS AND BUTTONS */
+input.textField, select.selectMenu, textarea.textArea, input.uploadField {
+	margin-right: 2px;
+}
+input.button {
+	margin: 1px;
+}
+// clear-style for buttons and forms
+@if $clear-style == true {
+	/* clear-style */
+	input.button, input.textField, input.uploadField, select.selectMenu, textarea.textArea {
+		background-color: #E2E2E2;
+		border: 0 none;
+		border-radius: 12px;
+		padding: 0.3em 0.5em;
+	}
+	select.selectMenu {
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+	}
+} @else {}
+
 input.defaultButton {
 	@if $button-color != null {
 		/* specific color */
@@ -480,6 +501,12 @@ input.defaultButton {
 	}
 	color: #fff;
 }
+input.button, select.selectMenu {
+	cursor: pointer;
+}
+
+
+/* VARIOUS */
 #footer {
 	background: none;
 	border-top: 1px dotted #000;
