@@ -363,12 +363,6 @@ table.tocArticle {
 	font-size: 1.1em;
 	padding-left: 5px;
 }
-/* inverse media query to avoid use of "unset" or "intial" properties */
-@media (max-width: ($break-medium - 0.01em)) {
-	#sidebar input.textField, #sidebar select.selectMenu, #sidebar input.button {
-		width: 100%;
-	}
-}
 
 /* sidebar link spacing */
 #sidebar a {
@@ -469,6 +463,11 @@ table.tocArticle {
 	}
 }
 
+/* login user */
+#sidebarUser tr td:nth-child(2) {
+    width: 70%;
+}
+
 
 /* FORMS AND BUTTONS */
 input.textField, select.selectMenu, textarea.textArea, input.uploadField {
@@ -503,6 +502,29 @@ input.defaultButton {
 }
 input.button, select.selectMenu {
 	cursor: pointer;
+}
+
+/* inverse media query to avoid use of "unset" or "initial" properties */
+@media (max-width: ($break-medium - 0.01em)) {
+	input.textField, textarea.textArea {
+		width: 93%;
+	}
+	#sidebar input.textField, #sidebar select.selectMenu, #sidebar input.button {
+		width: 98%;
+	}
+	p span.mceditor table.mceLayout {
+		width: 100% !important;
+	}
+	/* user registration page */
+	#registerForm table.data td.value {
+		display: block;
+		overflow: scroll;
+		width: 90%;
+	}
+	#registerForm {
+		display: block;
+		overflow: scroll;
+	}
 }
 
 
@@ -746,7 +768,8 @@ div.identifyType {
 }
 
 /* legible "Search result" and "Metadata" tables (with some awful solutions) */
-table.listing tr.heading, table.listing td.headseparator, table.listing td.heading, table.info td.heading, table.info td.headseparator {
+table.listing tr.heading, table.listing td.headseparator,
+table.listing td.heading, table.info td.heading, table.info td.headseparator {
 	@if $header-font-color != null {
 		background-color: $header-color;
 		color: $header-font-color;
@@ -784,10 +807,7 @@ table.listing td.endseparator, table.info td.endseparator {
 	border-top: 1px solid #000;
 }
 /* (probably broken) odd and even results separated */
-#results table.listing tr:nth-child(6n+7), #results table.listing tr:nth-child(6n+8) {
-	background-color: #E2E2E2;
-	color: #000;
-}
+#results table.listing tr:nth-child(6n+7), #results table.listing tr:nth-child(6n+8),
 #pkp-rt-viewMetadata table.listing tr:nth-child(4n+6) {
 	background-color: #E2E2E2;
 	color: #000;
