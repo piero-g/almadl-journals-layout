@@ -469,6 +469,36 @@ table.tocArticle {
 }
 
 
+/* FOOTER */
+#footer {
+	background: none;
+	border-top: 1px dotted #000;
+	padding-top: 3px;
+	font-size: 0.7em;
+	text-align: left;
+	margin-top: 20px;
+}
+#footer .privacy {
+	float: right;
+}
+@media (min-width: $break-medium) {
+	#footer .privacy {
+		float: none;
+		padding-left: 2em;
+	}
+}
+
+/* footer logos */
+.footerLogo {
+	float: right;
+	padding-left: 2px;
+}
+.footerLogo img {
+	height: auto;
+	width: 50px;
+}
+
+
 /* FORMS AND BUTTONS */
 input.textField, select.selectMenu, textarea.textArea, input.uploadField {
 	margin-right: 2px;
@@ -488,6 +518,12 @@ input.button {
 	select.selectMenu {
 		border-bottom-right-radius: 0;
 		border-top-right-radius: 0;
+	}
+	#navbar, div.separator {
+		border-bottom: 1px solid #888888;
+	}
+	#content, #footer {
+		border-top: 1px solid #888888;
 	}
 } @else {}
 
@@ -524,34 +560,6 @@ input.button, select.selectMenu {
 
 
 /* VARIOUS */
-#footer {
-	background: none;
-	border-top: 1px dotted #000;
-	padding-top: 3px;
-	font-size: 0.7em;
-	text-align: left;
-	margin-top: 20px;
-}
-#footer .privacy {
-	float: right;
-}
-@media (min-width: $break-medium) {
-	#footer .privacy {
-		float: none;
-		padding-left: 2em;
-	}
-}
-
-/* footer logos */
-.footerLogo {
-	float: right;
-	padding-left: 2px;
-}
-.footerLogo img {
-	height: auto;
-	width: 50px;
-}
-
 /* hide intro reserved for AlmaDL index */
 body#pkp-common-openJournalSystems #journalDescription {
 	display: none;
