@@ -516,11 +516,6 @@ input.button, select.selectMenu {
 		width: 100% !important;
 	}
 	/* user registration page */
-	#registerForm table.data td.value {
-		display: block;
-		overflow: scroll;
-		width: 90%;
-	}
 	#registerForm {
 		display: block;
 		overflow: scroll;
@@ -818,6 +813,10 @@ table.listing td.endseparator, table.info td.endseparator {
 #results table.listing tr:last-child, #pkp-rt-viewMetadata table.listing tr:last-child {
 	background-color: $body-color;
 	color: $font-color;
+}
+#pkp-rt-viewMetadata table.listing {
+	display: block;
+	overflow: scroll;
 }
 
 
