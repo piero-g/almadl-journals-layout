@@ -1,15 +1,15 @@
 // WARNING: some customization may not apply to the default OJS installation, see Readme
 @import 'journalTest';
 
-/*! 
-
-AlmaDL Responsive Layout for Journals, OJS 2.4.X
-#{$journal-title}
-License: Creative Commons BY 4.0
-Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
-Based on version 0.9.6-8
-Subversion n.: #{$subversion}
-
+/*!
+*
+* AlmaDL Responsive Layout for Journals, OJS 2.4.X
+* #{$journal-title}
+* License: Creative Commons BY 4.0
+* Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
+* Based on version 0.9.6-9
+* Subversion n.: #{$subversion}
+*
 */
 
 // breakpoints!
@@ -21,7 +21,7 @@ body {
 	color: $font-color;
 	background-color: $body-color;
 }
- h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-family: $font-titles;
 }
 
@@ -744,5 +744,61 @@ table.announcements tr.details td.more {
 div.identifyType {
 	display: block;
 }
+
+/* legible "Search result" and "Metadata" tables (with some awful solutions) */
+table.listing tr.heading, table.listing td.headseparator, table.listing td.heading, table.info td.heading, table.info td.headseparator {
+	@if $header-font-color != null {
+		background-color: $header-color;
+		color: $header-font-color;
+	} @else if $header-color == $body-color {
+		background-color: $a-color;
+		color: $body-color;
+	} @else {
+		background-color: $header-color;
+		color: $body-color;
+	}
+}
+table.listing tr.heading td, table.listing td.heading, table.info td.heading {
+	font-weight: bold;
+	text-align: center;
+}
+#pkp-navigation-search #results table.listing td[colspan="3"] {
+	/* important to bypass inline style */
+	padding-left: 43% !important;
+}
+#pkp-search-titleIndex #results table.listing td[colspan="3"] {
+	/* important to bypass inline style */
+	padding-left: 28% !important;
+}
+#pkp-navigation-search #results table.listing td.nodata, #pkp-search-titleIndex #results table.listing td.nodata {
+	/* important to bypass the style above */
+	padding-left: 0 !important;
+}
+table.listing td.separator, table.info td.separator {
+	border-top: 0; /* 1px solid #888888; if odd and even results have the same color */
+}
+table.listing td.headseparator, table.info td.headseparator {
+	border-top: 0;
+}
+table.listing td.endseparator, table.info td.endseparator {
+	border-top: 1px solid #000;
+}
+/* (probably broken) odd and even results separated */
+#results table.listing tr:nth-child(6n+7), #results table.listing tr:nth-child(6n+8) {
+	background-color: #E2E2E2;
+	color: #000;
+}
+#pkp-rt-viewMetadata table.listing tr:nth-child(4n+6) {
+	background-color: #E2E2E2;
+	color: #000;
+}
+#results table.listing tr[valign="top"] td {
+	padding-top: 10px;
+}
+#results table.listing tr:last-child, #pkp-rt-viewMetadata table.listing tr:last-child {
+	background-color: $body-color;
+	color: $font-color;
+}
+
 
 @include customizations;
