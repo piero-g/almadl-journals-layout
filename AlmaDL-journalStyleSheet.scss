@@ -465,7 +465,7 @@ table.tocArticle {
 
 /* login user */
 #sidebarUser tr td:nth-child(2) {
-    width: 70%;
+	width: 70%;
 }
 
 
@@ -506,7 +506,7 @@ input.textField, select.selectMenu, textarea.textArea, input.uploadField {
 input.button {
 	margin: 1px;
 }
-// clear-style for buttons and forms
+// clear-style for buttons and forms (and separators too)
 @if $clear-style == true {
 	/* clear-style */
 	input.button, input.textField, input.uploadField, select.selectMenu, textarea.textArea {
@@ -522,7 +522,7 @@ input.button {
 	#navbar, div.separator {
 		border-bottom: 1px solid #888888;
 	}
-	#content, #footer {
+	#content, #footer, table.announcements td.headseparator, table.announcements td.endseparator {
 		border-top: 1px solid #888888;
 	}
 } @else {}
@@ -554,7 +554,7 @@ input.button, select.selectMenu {
 	/* user registration page */
 	#registerForm {
 		display: block;
-		overflow: scroll;
+		overflow: auto;
 	}
 }
 
@@ -824,7 +824,7 @@ table.listing td.endseparator, table.info td.endseparator {
 }
 #pkp-rt-viewMetadata table.listing {
 	display: block;
-	overflow: scroll;
+	overflow: auto;
 }
 
 
