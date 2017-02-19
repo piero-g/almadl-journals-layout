@@ -2,9 +2,11 @@
 // please use only with AlmaDL-journalStyleSheet.scss;
 // make (and invoke) a specific file for each journal;
 
-// journal Title
-$journal-title:		Test Title;	// please avoid special characters
-$subversion:		0;	// a subversion number if you need to keep track of changes
+// Main Settings
+$journal-title:			Test Title;	// please avoid special characters
+$subversion:			0;			// a subversion number if you need to keep track of changes on your journal style
+$no-publication:		false;		// IMPORTANT: set to "true" ONLY if the journal hasn't published (yet) but you still need to go online, and remember to set again to "false" sligthly before publishing. Announcements are not considered a publication.
+
 
 // import Google Fonts (or insert here the code to import your fonts)
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700'); // optional font Serif for titles
@@ -13,7 +15,7 @@ $subversion:		0;	// a subversion number if you need to keep track of changes
 // Fonts Definitions
 $font-titles:			'Roboto Slab', serif !important;
 $font-body:				'Open Sans', sans-serif;
-$font-content-size:		0.9em;	// if a smaller font is used, consider changing this to 1em
+$font-content-size:		0.9em;		// if a smaller font is used, consider changing this to 1em
 
 
 // Colors Definitions
@@ -34,8 +36,9 @@ $header-centered:		false;		// header centered, could be "true" or "false" (left 
 $header-textual:		true;		// header based on image or text; could be "true" (textual) or "false" (image)
 $header-banner:			false;		// if set to "true" will extend always the header img to full width
 
-// Image in Home
+// Home
 $home-image:			false;		// if set to "true" will load the rules for an image in home (with caption); see Readme for HTML
+$no-current-home:		false;		// IMPORTANT: set to "true" if you are NOT including the "current issue" in your homepage
 
 // Issue Cover
 $issue-cover-main:		false;		// if set to "true" will load the rules for a responsive issue cover before the index
@@ -45,7 +48,7 @@ $issue-cover-size:		650px;		// set this value if a bigger cover is provided (ple
 // Workflow
 $only-publication:		false;		// if set to "true" will hide the "workflow schema" and the "Online submissions" links from the "About"
 
-// Double Publisher
+// Publisher and sponsor
 $double-publisher:		false;
 // if set to "true" will hide the "Sponsor" group; that is a useful workaround if you have more than one publisher (and you will list the second one both in the description of the Publisher and as a Sponsoring organization; see Readme for more info
 

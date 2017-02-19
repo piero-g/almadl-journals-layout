@@ -7,7 +7,7 @@
 * #{$journal-title}
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
-* Based on version 0.9.6-10
+* Based on version 0.9.6-11
 * Subversion n.: #{$subversion}
 *
 */
@@ -345,6 +345,20 @@ table.tocArticle {
 	}
 	/* if online submission disabled */
 	#onlineSubmissions, #aboutSubmissions li:first-child, li#linkDisableUserReg {
+		display: none;
+	}
+} @else { }
+
+@if $no-current-home == false {
+	/* hide "current" from NavBar, since we have the current TOC in home */
+	ul.menu li#current {
+		display: none;
+	}
+} @else { }
+
+@if $no-publication == true {
+	/* the journal has not published (yet), so remove every "search" and "archive" related elements */
+	ul.menu li#search, ul.menu li#archives, ul.menu li#current, #sidebarNavigation {
 		display: none;
 	}
 } @else { }
