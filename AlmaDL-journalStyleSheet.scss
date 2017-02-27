@@ -7,7 +7,7 @@
 * #{$journal-title}
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
-* Based on version 0.9.6-11
+* Based on version 0.9.6-12
 * Subversion n.: #{$subversion}
 *
 */
@@ -573,6 +573,93 @@ input.button, select.selectMenu {
 }
 
 
+/* ANNOUNCEMENTS */
+table.announcements td.title {
+	width: 100%;
+}
+table.announcements td.title h4 {
+	font-size: 1.5em !important;
+}
+table.announcements tr.details td.more {
+	font-size: 1.5em;
+	width: 30%;
+}
+table.announcements td {
+	display: block;
+	float: left;
+	width: 100% !important;
+	padding: 0;
+}
+table.announcements td.posted {
+    float: left;
+    width: 48% !important;
+}
+table.announcements td.more {
+    float: right;
+    padding-top: 0.3em;
+    width: 48% !important;
+}
+
+//if there is a "current issue" in home (and the journal has published)
+@if $no-current-home != true and $no-publication != true {
+	/* compact "announcementsHome" */
+	#announcementsHome {
+		font-size: 0.8em;
+		margin-bottom: 0;
+	}
+	#announcementsHome h3, #announcementsHome h4 {
+		padding-top: 0;
+		width: 98%;
+	}
+	#announcementsHome p {
+		margin: 0.5em;
+	}
+	#announcementsHome table {
+		width: 98%;
+	}
+	#announcementsHome tr.title td.more, #announcementsHome tr.description td.more {
+		display: none;
+	}
+} @else { }
+
+// boxed "announcementsHome", if there is a "current issue" in home and the "clear-style" is applied
+@if $clear-style == true and ($no-current-home != true and $no-publication != true) {
+	/* boxed "announcementsHome" with "clear-style" */
+	#announcementsHome {
+		background-color: #E2E2E2;
+		padding: 5px;
+	}
+	@media (min-width: 80.00em) { // could be optimized
+		#announcementsHome {
+			float: right;
+			margin-left: 1%;
+			margin-bottom: 2em;
+			max-height: 400px;
+			overflow: auto;
+			padding: 9px 1%;
+			width: 38%;
+		}
+		/* seems too easy */
+		#announcementsHome ~ table.tocArticle {
+			width: auto;
+		}
+		#announcementsHome ~ table.tocArticle td {
+			display: table-cell;
+		}
+		table.tocArticle ~ div.separator {
+			overflow: hidden;
+			width: auto;
+		}
+		@if $issue-cover-main == true {
+			/* when Cover in home */
+			#announcementsHome ~ #issueCoverImage, #announcementsHome ~ #issueCoverDescription {
+				width: 58%;
+			}
+		} @else { }
+	}
+} @else { }
+
+
 /* VARIOUS */
 /* hide intro reserved for AlmaDL index */
 body#pkp-common-openJournalSystems #journalDescription {
@@ -717,18 +804,6 @@ a[href*="searchInitial"], a[href*="issuesPage"], a[href*="searchPage"] {
 	#content #topBar {
 		display: block;
 	}
-}
-
-/* announcements */
-table.announcements td.title {
-	width: 100%;
-}
-table.announcements td.title h4 {
-	font-size: 1.5em !important;
-}
-table.announcements tr.details td.more {
-	font-size: 1.5em;
-	width: 30%;
 }
 
 // issue cover
