@@ -17,7 +17,7 @@ $no-publication:		false;		// IMPORTANT: set to "true" ONLY if the journal hasn't
 $font-titles:			'Roboto Slab', serif !important;
 $font-body:				'Open Sans', sans-serif;
 $font-content-size:		0.9em;		// if a smaller font is used, consider changing this to 1em
-$justified-text:		true;	// all appropriate text will be justified except for smaller screens; set "false" to left-align
+$justified-text:		true;		// all appropriate text will be justified except for smaller screens; set "false" to left-align
 
 
 // Colors Definitions
@@ -58,7 +58,7 @@ $sponsor:				false;
 // if the journal has only publishers (1 or more) but no sponsoring organization or supporting institutions > this is a small fix for you
 
 // Other styles
-$clear-style:			false;		// if "true" it enables a different style for buttons and forms, more clear and modern; set to "false" to restore the standard OJS style
+$clear-style:			true;		// if "true" it enables a different style for buttons and forms, more clear and modern; set to "false" to restore the standard OJS style
 $button-border-rad:		12px;		// define the radius of the border for buttons and forms; suggested values are 12px = most rounded corners; 7px; 5px = slightly smooth corners; 0 = squared corners
 
 
