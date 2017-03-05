@@ -7,7 +7,7 @@
 * #{$journal-title}
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
-* Based on version 0.9.6-12
+* Based on version 0.9.6-13
 * Subversion n.: #{$subversion}
 *
 */
@@ -691,18 +691,21 @@ body#pkp-common-openJournalSystems #journalDescription {
 	}
 }
 
-/* justify texts */
-body div#content p, body div#content ol, body div#content ul, #articleAbstract div {
-	text-align: left;
-}
-@media (min-width: $break-small) {
+// justify texts
+@if $justified-text == true {
+	/* justify texts */
 	body div#content p, body div#content ol, body div#content ul, #articleAbstract div {
-		text-align: justify;
+		text-align: left;
 	}
-}
-#footer p, #articleCitations p {
-	text-align: left !important;
-}
+	@media (min-width: $break-small) {
+		body div#content p, body div#content ol, body div#content ul, #articleAbstract div {
+			text-align: justify;
+		}
+	}
+	#footer p, #articleCitations p {
+		text-align: left !important;
+	}
+} @else { }
 
 /* blockquote */
 blockquote {
