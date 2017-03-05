@@ -12,7 +12,7 @@ It implies some tweaks to the standard code of OJS, as the introduction of viewp
 List of the files:
 
 - `AlmaDL-journalStyleSheet.scss`: a SASS to generate the CSS with
-- `_journalTest.scss`: the template with the customization for each journal
+- `_journalTest.scss`: the template with the customizations for each journal
 
 
 ## Deployment
@@ -25,7 +25,10 @@ List of the files:
 
 ## Details
 
-The theme is based on a few options to customize your journal easely but as in depth as possible - without having to edit manually the CSS.
+The theme is based on a few options to customize your journal easily but as in depth as possible - without having to edit manually the CSS. It covers several cases: as an example it could be used by a journal that does't adopt the OJS workflow (the CSS will hide the appropriate elements). Although it won't adapt to every possible scenario.
+
+With the exception of improvements to readability of tables and of general responsiveness, every cosmetic element that differs from the standard OJS experience is optionally rendered under the "clear-style" rule-set, enabled by default.
+
 
 ### Template Informations
 _todo_
@@ -122,6 +125,6 @@ If adding an image to the Homepage please consider that the CSS is not based on 
 
 ### Footer
 
-In OJS 2.4.X the footer has poor consistency, to style it appropriately the stylesheet implies that you enclose it in `<div id="footer">..</div>`
+In OJS 2.4.X the footer has poor consistency, to style it appropriately the stylesheet implies that you enclose it in `<div id="footer">..</div>` (possible as Journal Manager in 5.4 Journal Page Footer).
 
 
