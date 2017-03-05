@@ -12,6 +12,7 @@ $no-publication:		false;		// IMPORTANT: set to "true" ONLY if the journal hasn't
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700'); // optional font Serif for titles
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic');
 
+
 // Fonts Definitions
 $font-titles:			'Roboto Slab', serif !important;
 $font-body:				'Open Sans', sans-serif;
@@ -58,6 +59,7 @@ $sponsor:				false;
 // Other styles
 $clear-style:			false;		// if "true" it enables a different style for buttons and forms, more clear and modern; set to "false" to restore the standard OJS style
 $button-border-rad:		12px;		// define the radius of the border for buttons and forms; suggested values are 12px = most rounded corners; 7px; 5px = slightly smooth corners; 0 = squared corners
+
 
 //
 //	Custom Rules (they will appear at the bottom of the CSS)
