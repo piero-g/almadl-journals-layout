@@ -349,7 +349,7 @@ table.tocArticle {
 	}
 } @else { }
 
-@if $no-current-home == false {
+@if $no-current-home == false and $clear-style == true {
 	/* hide "current" from NavBar, since we have the current TOC in home */
 	ul.menu li#current {
 		display: none;
