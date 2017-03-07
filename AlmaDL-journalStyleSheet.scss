@@ -1,6 +1,7 @@
 // WARNING: some customization may not apply to the default OJS installation, see Readme
 @import 'journalTest'; 	// edit this line to import your customizations
 
+
 // fontawesome imported only if necessary
 @if $clear-style == true or $font-awesome == true {
 		@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -12,14 +13,15 @@
 * #{$journal-title}
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
-* Based on version 0.9.8-1
+* Based on version 0.9.8-2
 * Subversion n.: #{$subversion}
 *
 */
 
 // breakpoints!
-$break-small:	26.75em;
-$break-medium:	48.00em;
+$break-small:	26.75em; // 428px - below this resolution the sidebar does not display
+$break-medium:	48.00em; // 768px - below this: reduced lateral spacing
+$break-touch:	64.00em; // 1024px - below this: link spacing for touchpad
 
 body {
 	font-family: $font-body;
@@ -204,10 +206,10 @@ ul.menu li {
 	padding: 0;
 }
 ul.menu a {
-	line-height: 2em;
+	line-height: 2.5em;
 	padding: 0.5em 0.75em;
 }
-@media (min-width: $break-medium) {
+@media (min-width: $break-touch) {
 	ul.menu {
 		text-align: left;
 	}
@@ -248,7 +250,7 @@ p a {
 	display: inline-block;
 	margin: 0.5em 0;
 }
-@media (min-width: $break-medium) {
+@media (min-width: $break-touch) {
 	p a {
 		display: inline;
 		margin: 0;
@@ -260,15 +262,15 @@ p a {
 ul {
 	padding: 0 0 0 1.1em;
 }
-@media (min-width: $break-medium) {
+@media (min-width: $break-touch) {
 	ul {
 		padding: 0 0 0 2.5em;
 	}
 }
 li {
-	margin: 1em 0;
+	margin: 0.5em 0;
 }
-@media (min-width: $break-medium) {
+@media (min-width: $break-touch) {
 	li {
 		margin: 0;
 	}
@@ -305,7 +307,7 @@ table.tocArticle {
 .tocPages {
 	clear: both;
 }
-@media (min-width: $break-medium) {
+@media (min-width: $break-touch) {
 	.tocGalleys a {
 		margin-bottom: 0;
 	}
@@ -373,7 +375,7 @@ table.tocArticle {
 #sidebar input.button {
 	margin-top: 9px;
 }
-@media (min-width: $break-medium) {
+@media (min-width: $break-touch) {
 	#sidebar input.button {
 		margin-top: 0;
 	}
@@ -394,7 +396,7 @@ table.tocArticle {
 #sidebarAnnouncementFeed a, #sidebarWebFeed a {
 	margin-bottom: 5px;
 }
-@media (min-width: $break-medium) {
+@media (min-width: $break-touch) {
 	#sidebar a {
 		display: inline;
 		margin: 0;
@@ -460,6 +462,9 @@ table.tocArticle {
 	#sidebarKeywordCloud {
 		display: block;
 	}
+	#sidebarKeywordCloud a {
+		display: inline;
+	}
 }
 
 /* font sizer */
@@ -473,7 +478,7 @@ table.tocArticle {
 	margin-left: 8px;
 	margin-right: 4px;
 }
-@media (min-width: $break-medium) {
+@media (min-width: $break-touch) {
 	#sidebarFontSize {
 		display: block;
 	}
@@ -540,7 +545,7 @@ div.block.custom img {
 #footer .privacy {
 	float: right;
 }
-@media (min-width: $break-medium) {
+@media (min-width: $break-touch) {
 	#footer .privacy {
 		float: none;
 		padding-left: 2em;
@@ -600,7 +605,7 @@ input.button, select.selectMenu {
 }
 
 /* inverse media query to avoid use of "unset" or "initial" properties */
-@media (max-width: ($break-medium - 0.01em)) {
+@media (max-width: ($break-touch - 0.01em)) {
 	input.textField, textarea.textArea {
 		width: 93%;
 	}
@@ -779,7 +784,7 @@ a[href*="searchInitial"], a[href*="issuesPage"], a[href*="searchPage"] {
 #pkp-search-authorIndex #content a {
 	line-height: 2em;
 }
-@media (min-width: $break-medium) {
+@media (min-width: $break-touch) {
 	a[href*="searchInitial"], a[href*="issuesPage"] {
 		line-height: 1em;
 		padding: 0;
@@ -794,7 +799,7 @@ a[href*="searchInitial"], a[href*="issuesPage"], a[href*="searchPage"] {
 #additionalHomeContent a {
 		line-height: 2em;
 	}
-@media (min-width: $break-medium) {
+@media (min-width: $break-touch) {
 	#additionalHomeContent a {
 		line-height: 1em;
 	}
