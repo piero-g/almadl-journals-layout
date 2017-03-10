@@ -960,6 +960,17 @@ table.listing td.headseparator, table.info td.headseparator {
 table.listing td.endseparator, table.info td.endseparator {
 	border-top: 1px solid #000;
 }
+/* align links to abstracts and galleys */
+#results table.listing td[align=right] a {
+	clear: right;
+	float: right;
+	margin-bottom: 9px;
+}
+@media (min-width: $break-touch) {
+	#results table.listing td[align=right] a {
+		margin-bottom: 0;
+	}
+}
 /* (probably broken) odd and even results separated */
 #results table.listing tr:nth-child(6n+7), #results table.listing tr:nth-child(6n+8),
 #pkp-rt-viewMetadata table.listing tr:nth-child(4n+6) {
