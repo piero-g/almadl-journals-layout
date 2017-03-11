@@ -22,6 +22,7 @@
 $break-small:	26.75em; // 428px - below this resolution the sidebar does not display
 $break-medium:	48.00em; // 768px - below this: reduced lateral spacing
 $break-touch:	64.00em; // 1024px - below this: link spacing for touchpad
+$break-column:	80.00em; // 1280px - text in double column/boxed announcementsHome
 
 body {
 	font-family: $font-body;
@@ -331,15 +332,15 @@ table.tocArticle {
 	margin: 0 1em 0.25em 0;
 	padding-top: 0.75em;
 }
-/* 1200px */
-@media (min-width: 75.00em) {
+/* needs reworking */
+@media (min-width: $break-column) {
 	#articleBody {
 		-moz-column-count: 2;
 		-webkit-column-count: 2;
 		column-count: 2;
-		-moz-column-gap: 1.5em;
-		-webkit-column-gap: 1.5em;
-		column-gap: 1.5em;
+		-moz-column-gap: 2em;
+		-webkit-column-gap: 2em;
+		column-gap: 2em;
 	}
 }
 
@@ -679,10 +680,10 @@ table.announcements td.more {
 		background-color: #E2E2E2;
 		padding: 5px;
 	}
-	@media (min-width: 80.00em) { // could be optimized
+	@media (min-width: $break-column) { // could be optimized
 		#announcementsHome {
 			float: right;
-			margin-left: 1%;
+			margin-left: 1.5%;
 			margin-bottom: 2em;
 			max-height: 400px;
 			overflow: auto;
