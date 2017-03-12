@@ -358,9 +358,11 @@ table.tocArticle {
 } @else { }
 
 @if $no-current-home == false and $clear-style == true {
-	/* hide "current" from NavBar, since we have the current TOC in home */
-	ul.menu li#current {
-		display: none;
+	/* current TOC in home: hide "current" from NavBar (only if it's Above the folder, sort of)  */
+	@media (min-width: $break-touch) {
+		ul.menu li#current {
+			display: none;
+		}
 	}
 } @else { }
 
