@@ -974,6 +974,11 @@ table.listing td.endseparator, table.info td.endseparator {
 		margin-bottom: 0;
 	}
 }
+#results table.listing tr:last-child td[colspan="2"] a {
+	clear: none;
+	float: none;
+	margin-bottom: 0;
+}
 /* (probably broken) odd and even results separated */
 #results table.listing tr:nth-child(6n+7), #results table.listing tr:nth-child(6n+8),
 #pkp-rt-viewMetadata table.listing tr:nth-child(4n+6) {
