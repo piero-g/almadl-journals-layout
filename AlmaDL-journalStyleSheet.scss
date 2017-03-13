@@ -13,7 +13,7 @@
 * #{$journal-title}
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
-* Based on version 0.9.8-2
+* Based on version 0.9.8-3
 * Subversion n.: #{$subversion}
 *
 */
@@ -692,11 +692,11 @@ table.announcements td.more {
 			padding: 9px 1%;
 			width: 38%;
 		}
-		/* seems too easy */
-		#announcementsHome ~ table.tocArticle {
+		/* seems too easy */ // #currentHome selectors are for custom javascript in home
+		#announcementsHome ~ table.tocArticle, #currentHome table.tocArticle {
 			width: auto;
 		}
-		#announcementsHome ~ table.tocArticle td {
+		#announcementsHome ~ table.tocArticle td, #currentHome table.tocArticle td {
 			display: table-cell;
 		}
 		table.tocArticle ~ div.separator {
@@ -704,8 +704,9 @@ table.announcements td.more {
 			width: auto;
 		}
 		@if $issue-cover-main == true {
-			/* when Cover in home */
-			#announcementsHome ~ #issueCoverImage, #announcementsHome ~ #issueCoverDescription {
+			/* when Cover in home */ // #currentHome selectors are for custom javascript in home
+			#announcementsHome ~ #issueCoverImage, #announcementsHome ~ #issueCoverDescription,
+			#currentHome #issueCoverImage, #currentHome #issueCoverDescription {
 				width: 58%;
 			}
 		} @else { }
