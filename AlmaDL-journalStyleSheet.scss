@@ -414,6 +414,7 @@ table.tocArticle {
 
 /* articleTools + authorBios */
 #sidebarRTArticleTools, #sidebarRTAuthorBios {
+	/* highlight these elements */
 	border-left: 2px solid $a-color;
 }
 #sidebar .articleToolItem a {
@@ -433,7 +434,7 @@ table.tocArticle {
 }
 
 /* mendeley icon (exception to default values) */
-// WARNING: this part should be irrelevant to other standard OJS installations
+// WARNING: this is not part of the standard OJS installations
 #sidebar .articleToolItem a.mendeleyIcon {
 	display: block;
 	float: left;
@@ -716,6 +717,7 @@ table.announcements td.more {
 
 
 /* VARIOUS */
+// WARNING, see README
 /* hide intro reserved for AlmaDL index */
 body#pkp-common-openJournalSystems #journalDescription {
 	display: none;
@@ -766,10 +768,12 @@ blockquote {
 div#top + div#sidebar {
 	margin-right: 0 !important;
 }
+// WARNING: this is not part of the standard OJS installations
 body[id^="pkp-rt"] #top+#main, body[id^="pkp-bio"] #top+#main {
 	margin: 0 2%;
 	width: 96%
 }
+// WARNING: this is not part of the standard OJS installations
 body[id^="pkp-rt"] #headerTitle, body[id^="pkp-bio"] #headerTitle {
 	padding: 1em 0;
 }
@@ -816,7 +820,7 @@ a[href*="searchInitial"], a[href*="issuesPage"], a[href*="searchPage"] {
 	clear: both;
 }
 
-// if Home Image
+// if Home Image: see README
 @if $home-image == true {
 	/* home with image */
 	.homeImage {
@@ -881,11 +885,6 @@ a[href*="searchInitial"], a[href*="issuesPage"], a[href*="searchPage"] {
 		max-width: $issue-cover-size;
 		width: 99%;
 	}
-	/*@media (min-width: $break-medium) {
-		#issueCoverImage img, #issueCoverDescription {
-			width: 80%;
-		}
-	}*/
 } @else { }
 @if $issue-cover-archive == true {
 	.issueCoverImage img {
@@ -907,12 +906,14 @@ a[href*="searchInitial"], a[href*="issuesPage"], a[href*="searchPage"] {
 }
 
 /* issue DOI (custom) */
+// WARNING: this is not part of the standard OJS installations
 .doi-issue {
 	font-size: 0.8em;
 	float: right;
 }
 
 /* show identifyType */
+// WARNING: this is not part of the standard OJS installations
 div.identifyType {
 	display: block;
 }
@@ -958,7 +959,7 @@ table.listing tr.heading a, table.listing tr.heading a:link, table.listing tr.he
 	padding-left: 0 !important;
 }
 table.listing td.separator, table.info td.separator {
-	border-top: 0; /* 1px solid #888888; if odd and even results have the same color */
+	border-top: 0;
 }
 table.listing td.headseparator, table.info td.headseparator {
 	border-top: 0;
