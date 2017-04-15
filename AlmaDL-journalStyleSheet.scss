@@ -928,7 +928,7 @@ table.listing td.heading, table.info td.heading, table.info td.headseparator {
 		color: $body-color;
 	} @else {
 		background-color: $header-color;
-		color: $body-color;
+		color: $a-color;
 	}
 }
 table.listing tr.heading a, table.listing tr.heading a:link, table.listing tr.heading a:visited {
@@ -937,7 +937,7 @@ table.listing tr.heading a, table.listing tr.heading a:link, table.listing tr.he
 	} @else if $header-color == $body-color {
 		color: $body-color;
 	} @else {
-		color: $body-color;
+		color: $a-color;
 	}
 }
 table.listing tr.heading td, table.listing td.heading, table.info td.heading {
