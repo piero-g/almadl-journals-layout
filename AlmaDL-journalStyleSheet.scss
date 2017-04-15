@@ -14,7 +14,7 @@
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
 * https://github.com/piero-g/almadl-journals-layout
-* Based on version 0.9.8-3 | Subversion n.: #{$subversion}
+* Based on version 0.9.8-4 | Subversion n.: #{$subversion}
 *
 */
 
@@ -918,8 +918,7 @@ div.identifyType {
 }
 
 /* legible "Search result" and "Metadata" tables (with some awful solutions) */
-table.listing tr.heading, table.listing td.headseparator,
-table.listing td.heading, table.info td.heading, table.info td.headseparator {
+table.listing tr.heading td, table.listing td.heading, table.info td.heading {
 	@if $header-font-color != null {
 		background-color: $header-color;
 		color: $header-font-color;
@@ -930,6 +929,10 @@ table.listing td.heading, table.info td.heading, table.info td.headseparator {
 		background-color: $header-color;
 		color: $a-color;
 	}
+	/* space between head and first result */
+	border-bottom: 5px solid #fff;
+	font-weight: bold;
+	text-align: center;
 }
 table.listing tr.heading a, table.listing tr.heading a:link, table.listing tr.heading a:visited {
 	@if $header-font-color != null {
@@ -939,10 +942,8 @@ table.listing tr.heading a, table.listing tr.heading a:link, table.listing tr.he
 	} @else {
 		color: $a-color;
 	}
-}
-table.listing tr.heading td, table.listing td.heading, table.info td.heading {
-	font-weight: bold;
-	text-align: center;
+	/* link distinction */
+	text-decoration: underline;
 }
 #pkp-navigation-search #results table.listing td[colspan="3"] {
 	/* important to bypass inline style */
