@@ -13,8 +13,8 @@
 * #{$journal-title}
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
-* Based on version 0.9.8-3
-* Subversion n.: #{$subversion}
+* https://github.com/piero-g/almadl-journals-layout
+* Based on version 0.9.8-3 | Subversion n.: #{$subversion}
 *
 */
 
@@ -433,6 +433,7 @@ table.tocArticle {
 }
 
 /* mendeley icon (exception to default values) */
+// WARNING: this part should be irrelevant to other standard OJS installations
 #sidebar .articleToolItem a.mendeleyIcon {
 	display: block;
 	float: left;
