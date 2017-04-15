@@ -34,7 +34,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* HEADER */
+/* ------ *
+ * HEADER *
+ * ------ */
 #headerTitle {
 	@if $header-color == $a-color {
 		/* header use main theme color */
@@ -124,7 +126,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* HEADINGS */
+/* -------- *
+ * HEADINGS *
+ * -------- */
 h1, h2 {
 	font-weight: 700 !important;
 }
@@ -150,7 +154,9 @@ h1, h2 {
 }
 
 
-/* CONTAINERS */
+/* ---------- *
+ * CONTAINERS *
+ * ---------- */
 #container {
 	margin: 0 auto;
 	min-width: 300px !important;
@@ -192,10 +198,11 @@ h1, h2 {
 		width: 14%;
 	}
 }
-/* end of body responsive */
 
 
-/* NAVBAR */
+/* ------ *
+ * NAVBAR *
+ * ------ */
 #navbar {
 	border-bottom: 1px dotted #000;
 }
@@ -224,7 +231,9 @@ ul.menu a {
 }
 
 
-/* LINKS */
+/* ----- *
+ * LINKS *
+ * ----- */
 a, a:link, a:visited {
 	color: $a-color;
 	text-decoration: none;
@@ -259,7 +268,9 @@ p a {
 }
 
 
-/* LISTS */
+/* ----- *
+ * LISTS *
+ * ----- */
 ul {
 	padding: 0 0 0 1.1em;
 }
@@ -278,7 +289,9 @@ li {
 }
 
 
-/* ISSUE TOC */
+/* --------- *
+ * ISSUE TOC *
+ * --------- */
 table.tocArticle {
 	margin-bottom: 9px;
 }
@@ -315,7 +328,9 @@ table.tocArticle {
 }
 
 
-/* FULLTEXT HTML */
+/* ------------- *
+ * FULLTEXT HTML *
+ * ------------- */
 #articleContent {
 	margin: 0 2%;
 }
@@ -344,9 +359,13 @@ table.tocArticle {
 	}
 }
 
+// --------
 // REMOVALS
+// --------
 @if $only-publication == true {
-	/* REMOVALS */
+	/* ------- *
+	* REMOVALS *
+	* -------- */
 	/* hide OJS internal workflow schema */
 	#pkp-about-aboutThisPublishingSystem #content > p:nth-child(2) {
 		display: none;
@@ -374,7 +393,9 @@ table.tocArticle {
 } @else { }
 
 
-/* SIDEBAR */
+/* ------- *
+ * SIDEBAR *
+ * ------- */
 #sidebar input.button {
 	margin-top: 9px;
 }
@@ -538,7 +559,9 @@ div.block.custom img {
 }
 
 
-/* FOOTER */
+/* ------ *
+ * FOOTER *
+ * ------ */
 #footer {
 	background: none;
 	border-top: 1px dotted #000;
@@ -568,7 +591,9 @@ div.block.custom img {
 }
 
 
-/* FORMS AND BUTTONS */
+/* ----------------- *
+ * FORMS AND BUTTONS *
+ * ----------------- */
 input.textField, select.selectMenu, textarea.textArea, input.uploadField {
 	margin-right: 2px;
 }
@@ -628,7 +653,9 @@ input.button, select.selectMenu {
 }
 
 
-/* ANNOUNCEMENTS */
+/* ------------- *
+ * ANNOUNCEMENTS *
+ * ------------- */
 table.announcements td.title {
 	width: 100%;
 }
@@ -716,7 +743,9 @@ table.announcements td.more {
 } @else { }
 
 
-/* VARIOUS */
+/* ------- *
+ * VARIOUS *
+ * ------- */
 // WARNING, see README
 /* hide intro reserved for AlmaDL index */
 body#pkp-common-openJournalSystems #journalDescription {
