@@ -14,7 +14,7 @@
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
 * https://github.com/piero-g/almadl-journals-layout
-* Based on version 0.9.8-4 | Subversion n.: #{$subversion}
+* Based on version 0.9.9 | Subversion n.: #{$subversion}
 *
 */
 
@@ -24,10 +24,18 @@ $break-medium:	48.00em; // 768px - below this: reduced lateral spacing
 $break-touch:	64.00em; // 1024px - below this: link spacing for touchpad
 $break-column:	80.00em; // 1280px - text in double column/boxed announcementsHome
 
+html, body {
+	height: 100%;
+}
 body {
 	font-family: $font-body;
 	color: $font-color;
-	background-color: $body-color;
+	@if $clear-style == true {
+		/* clear-style: focus on container in higher resolutions */
+		background-color: #E2E2E2;
+	} @else {
+		background-color: $body-color;
+	}
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-titles;
@@ -158,9 +166,16 @@ h1, h2 {
  * CONTAINERS *
  * ---------- */
 #container {
+	background-color: $body-color;
 	margin: 0 auto;
 	min-width: 300px !important;
 	max-width: 2000px !important;
+	min-height: 100%;
+	overflow: hidden;
+	@if $clear-style == true {
+		/* clear-style */
+		border-radius: $button-border-rad * 3;
+	} @else { }
 }
 #content {
 	border-top: 1px dotted #000;
