@@ -169,14 +169,21 @@ h1, h2 {
 	background-color: $body-color;
 	margin: 0 auto;
 	min-width: 300px !important;
-	max-width: 2000px !important;
+	max-width: 125.00em !important;
 	min-height: 100%;
 	overflow: hidden;
-	@if $clear-style == true {
-		/* clear-style */
-		border-radius: $button-border-rad * 3;
-	} @else { }
 }
+// focus on container
+@if $clear-style == true {
+	/* clear-style */
+	@media (min-width: 125.00em) {
+		#container {
+			border-radius: $button-border-rad * 3;
+			margin: 1% auto;
+			padding: 1% auto;
+		}
+	}
+} @else { }
 #content {
 	border-top: 1px dotted #000;
 	font-size: $font-content-size;
