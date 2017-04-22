@@ -14,7 +14,7 @@
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
 * https://github.com/piero-g/almadl-journals-layout
-* Based on version 0.9.9 | Subversion n.: #{$subversion}
+* Based on version 0.9.9-1 | Subversion n.: #{$subversion}
 *
 */
 
@@ -32,7 +32,7 @@ body {
 	color: $font-color;
 	@if $clear-style == true {
 		/* clear-style: focus on container in higher resolutions */
-		background-color: #E2E2E2;
+		background-color: #B5B5B5;
 	} @else {
 		background-color: $body-color;
 	}
@@ -626,10 +626,16 @@ input.button {
 @if $clear-style == true {
 	/* clear-style */
 	input.button, input.textField, input.uploadField, select.selectMenu, textarea.textArea {
-		background-color: #E2E2E2;
 		border: 0 none;
 		border-radius: $button-border-rad;
 		padding: 0.3em 0.5em;
+	}
+	input.textField, input.uploadField, select.selectMenu, textarea.textArea {
+		background-color: #E2E2E2;
+	}
+	input.button {
+		background-color: #B5B5B5;
+		color: #000000;
 	}
 	select.selectMenu {
 		border-bottom-right-radius: 0;
