@@ -180,9 +180,11 @@ h1, h2 {
 		#container {
 			border-radius: $button-border-rad * 3;
 			margin: 1% auto;
-			padding: 1% 0;
+			padding-bottom: 1%;
 		}
-	}
+		#headerTitle {
+			padding-top: 1%;
+		}
 } @else { }
 #content {
 	border-top: 1px dotted #000;
