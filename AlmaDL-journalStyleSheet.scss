@@ -14,7 +14,7 @@
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
 * https://github.com/piero-g/almadl-journals-layout
-* Based on version 0.9.9-2 | Subversion n.: #{$subversion}
+* Based on version 0.9.9-3 | Subversion n.: #{$subversion}
 *
 */
 
@@ -22,7 +22,7 @@
 $break-small:	26.75em; // 428px - below this resolution the sidebar does not display
 $break-medium:	48.00em; // 768px - below this: reduced lateral spacing
 $break-touch:	64.00em; // 1024px - below this: link spacing for touchpad
-$break-column:	80.00em; // 1280px - text in double column/boxed announcementsHome
+$break-column:	85.00em; // 1360px (was 80.00em) - plenty of space: text in double column/boxed announcementsHome
 
 html, body {
 	height: 100%;
@@ -719,16 +719,14 @@ table.announcements td.more {
 	#announcementsHome {
 		font-size: 0.8em;
 		margin-bottom: 0;
+		padding: 5px 3%;
+		width: 94%;
 	}
 	#announcementsHome h3, #announcementsHome h4 {
 		padding-top: 0;
-		width: 98%;
 	}
 	#announcementsHome p {
 		margin: 0.5em;
-	}
-	#announcementsHome table {
-		width: 98%;
 	}
 	#announcementsHome tr.title td.more, #announcementsHome tr.description td.more {
 		display: none;
@@ -740,12 +738,11 @@ table.announcements td.more {
 	/* boxed "announcementsHome" with "clear-style" */
 	#announcementsHome {
 		background-color: #E2E2E2;
-		padding: 5px;
 	}
 	@media (min-width: $break-column) { // could be optimized
 		#announcementsHome {
 			float: right;
-			margin-left: 1.5%;
+			margin-left: 5%;
 			margin-bottom: 2em;
 			max-height: 400px;
 			overflow: auto;
@@ -767,7 +764,7 @@ table.announcements td.more {
 			/* when Cover in home */ // #currentHome selectors are for custom javascript in home
 			#announcementsHome ~ #issueCoverImage, #announcementsHome ~ #issueCoverDescription,
 			#currentHome #issueCoverImage, #currentHome #issueCoverDescription {
-				width: 58%;
+				width: 55%;
 			}
 		} @else { }
 	}
