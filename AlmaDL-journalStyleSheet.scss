@@ -353,37 +353,6 @@ table.tocArticle {
 }
 
 
-/* ------------- *
- * FULLTEXT HTML *
- * ------------- */
-#articleContent {
-	margin: 0 2%;
-}
-#articleBody {
-	text-align: justify;
-}
-#articleFooter {
-	font-size: small;
-	margin-top: 5%;
-}
-#articleTitle h1 {
-	font-size: 1.5em;
-	font-weight: normal;
-	margin: 0 1em 0.25em 0;
-	padding-top: 0.75em;
-}
-/* needs reworking */
-@media (min-width: $break-column) {
-	#articleBody {
-		-moz-column-count: 2;
-		-webkit-column-count: 2;
-		column-count: 2;
-		-moz-column-gap: 2em;
-		-webkit-column-gap: 2em;
-		column-gap: 2em;
-	}
-}
-
 // --------
 // REMOVALS
 // --------
