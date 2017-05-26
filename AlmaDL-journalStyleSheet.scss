@@ -28,14 +28,14 @@ html, body {
 	height: 100%;
 }
 body {
-	font-family: $font-body;
-	color: $font-color;
 	@if $clear-style == true {
 		/* clear-style: focus on container in higher resolutions */
 		background-color: #B5B5B5;
 	} @else {
 		background-color: $body-color;
 	}
+	color: $font-color;
+	font-family: $font-body;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-titles;
@@ -140,24 +140,23 @@ p {
 /* -------- *
  * HEADINGS *
  * -------- */
-h1, h2 {
+h1, h2, #articleTitle h3 {
 	font-weight: 700 !important;
 }
-#content h2 {
-	font-size: 1.8em;
-}
-#content h3 {
-	font-size: 1.5em;
-}
-#content h4 {
-	font-size: 1.3em;
-	padding-top: 0.75em;
-}
-#content h5 {
-	font-size: 1.15em;
-}
-#articleTitle h3 {
-	font-weight: 700;
+#content {
+	& h2 {
+		font-size: 1.8em;
+	}
+	& h3 {
+		font-size: 1.5em;
+	}
+	& h4 {
+		font-size: 1.3em;
+		padding-top: 0.75em;
+	}
+	& h5 {
+		font-size: 1.15em;
+	}
 }
 /* margin for masthead profiles in separate pages */
 #displayMembership h4 {
@@ -171,8 +170,8 @@ h1, h2 {
 #container {
 	background-color: $body-color;
 	margin: 0 auto;
-	min-width: 300px !important;
 	max-width: 125.00em !important;
+	min-width: 300px !important;
 	min-height: 100%;
 	overflow: hidden;
 }
@@ -238,24 +237,24 @@ h1, h2 {
 ul.menu {
 	font-size: 1.2em;
 	text-align: center;
-}
-ul.menu li {
-	padding: 0;
-}
-ul.menu a {
-	line-height: 2.5em;
-	padding: 0.5em 0.75em;
+	& li {
+		padding: 0;
+	}
+	& a {
+		line-height: 2.5em;
+		padding: 0.5em 0.75em;
+	}
 }
 @media (min-width: $break-touch) {
 	ul.menu {
 		text-align: left;
-	}
-	ul.menu a {
-		line-height: 1em;
-		padding: 0;
-	}
-	ul.menu li {
-		padding: 0 1.5em 0 0;
+		& a {
+			line-height: 1em;
+			padding: 0;
+		}
+		& li {
+			padding: 0 1.5em 0 0;
+		}
 	}
 }
 
@@ -269,19 +268,16 @@ a, a:link, a:visited {
 }
 a:active, a:hover {
 	background: none;
-	text-decoration: underline;
 	@if $a-hoover-color != null {
 		/* specific color */
 		color: $a-hoover-color;
 	} @else {
 		color: $a-color;
 	}
-}
-/* navbar and breadcrumb coherence */
-ul.menu a:active, ul.menu a:hover {
 	text-decoration: underline;
 }
-#breadcrumb a:active, #breadcrumb a:hover {
+/* navbar and breadcrumb coherence */
+ul.menu a:active, ul.menu a:hover, #breadcrumb a:active, #breadcrumb a:hover {
 	text-decoration: underline;
 }
 /* links in paragraphs */
@@ -303,15 +299,13 @@ p a {
 ul {
 	padding: 0 0 0 1.1em;
 }
-@media (min-width: $break-touch) {
-	ul {
-		padding: 0 0 0 2.5em;
-	}
-}
 li {
 	margin: 0.5em 0;
 }
 @media (min-width: $break-touch) {
+	ul {
+		padding: 0 0 0 2.5em;
+	}
 	li {
 		margin: 0;
 	}
@@ -478,24 +472,21 @@ table.tocArticle {
 #sidebarKeywordCloud {
 	display: none;
 	text-align: center;
-}
-#sidebarKeywordCloud span.blockTitle {
-	text-align: left;
+	& span.blockTitle {
+		text-align: left;
+	}
 }
 @media (min-width: $break-medium) {
 	#sidebarKeywordCloud {
 		display: block;
-	}
-	#sidebarKeywordCloud a {
-		display: inline;
+		& a {
+			display: inline;
+		}
 	}
 }
 
 /* font sizer */
-#sidebarFontSize {
-	display: none;
-}
-#sidebarFontSize + br {
+#sidebarFontSize, #sidebarFontSize + br {
 	display: none;
 }
 #sizer a {
@@ -526,9 +517,9 @@ div.block.custom img {
 	/* icons for clear-style */
 	.blockTitle:before {
 		#sidebarLanguageToggle &, #sidebarNavigation &, #sidebarWebFeed &, #sidebarAnnouncementFeed &, #sidebarUser &, #sidebarRTAuthorBios & {
+			display: inline-block;
 			font-family: FontAwesome;
 			font-size: 1.2em;
-			display: inline-block;
 			padding-right: 5px;
 		}
 	}
@@ -563,13 +554,13 @@ div.block.custom img {
 #footer {
 	background: none;
 	border-top: 1px dotted #000;
-	padding-top: 3px;
 	font-size: 0.7em;
-	text-align: left;
 	margin-top: 20px;
-}
-#footer .privacy {
-	float: right;
+	padding-top: 3px;
+	text-align: left;
+	& .privacy {
+		float: right;
+	}
 }
 @media (min-width: $break-touch) {
 	#footer .privacy {
@@ -582,10 +573,10 @@ div.block.custom img {
 .footerLogo {
 	float: right;
 	padding-left: 2px;
-}
-.footerLogo img {
-	height: auto;
-	width: 50px;
+	& img {
+		height: auto;
+		width: 50px;
+	}
 }
 
 
@@ -673,8 +664,8 @@ table.announcements tr.details td.more {
 table.announcements td {
 	display: block;
 	float: left;
-	width: 100% !important;
 	padding: 0;
+	width: 100% !important;
 }
 table.announcements td.posted {
 	float: left;
@@ -694,15 +685,15 @@ table.announcements td.more {
 		margin-bottom: 0;
 		padding: 5px 3%;
 		width: 94%;
-	}
-	#announcementsHome h3, #announcementsHome h4 {
-		padding-top: 0;
-	}
-	#announcementsHome p {
-		margin: 0.5em;
-	}
-	#announcementsHome tr.title td.more, #announcementsHome tr.description td.more {
-		display: none;
+		& h3, & h4 {
+			padding-top: 0;
+		}
+		& p {
+			margin: 0.5em;
+		}
+		& tr.title td.more, & tr.description td.more {
+			display: none;
+		}
 	}
 } @else { }
 
@@ -755,7 +746,6 @@ body#pkp-common-openJournalSystems #journalDescription {
 .small-caps {
 	font-variant: small-caps;
 }
-
 #journalLayout table {
 	font-size: 0.7em;
 }
@@ -837,7 +827,7 @@ a[href*="searchInitial"], a[href*="issuesPage"], a[href*="searchPage"] {
 /* home */
 #additionalHomeContent a {
 		line-height: 2em;
-	}
+}
 @media (min-width: $break-touch) {
 	#additionalHomeContent a {
 		line-height: 1em;
@@ -883,10 +873,7 @@ a[href*="searchInitial"], a[href*="issuesPage"], a[href*="searchPage"] {
 } @else { }
 
 /* small-screen spacing */
-#journalDescription + br {
-	display: none;
-}
-#content #topBar {
+#journalDescription + br, #content #topBar {
 	display: none;
 }
 @media (min-width: $break-medium) {
