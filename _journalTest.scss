@@ -17,7 +17,7 @@ $no-publication:		false;		// IMPORTANT: set to "true" ONLY if the journal hasn't
 $font-titles:			'Roboto Slab', serif !important;
 $font-body:				'Open Sans', sans-serif;
 $font-content-size:		0.9em;		// if a smaller font is used, consider changing this to 1em
-$justified-text:		true;		// all appropriate text will be justified except for smaller screens; set "false" to left-align
+$justified-text:		false;		// all appropriate text will be justified except for smaller screens; set "false" to left-align
 
 
 // Colors Definitions
