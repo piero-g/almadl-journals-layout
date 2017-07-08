@@ -937,6 +937,12 @@ a[href*="searchInitial"], a[href*="issuesPage"], a[href*="searchPage"] {
 	min-height: 700px !important;
 }
 
+/* pluginMissing fix */
+#pluginMissing {
+	max-height: 95%;
+	overflow: scroll;
+}
+
 /* issue DOI (custom) */
 // WARNING: this is not part of the standard OJS installations
 .doi-issue {
