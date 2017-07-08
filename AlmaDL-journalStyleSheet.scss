@@ -761,9 +761,6 @@ body#pkp-common-openJournalSystems #journalDescription {
 .small-caps {
 	font-variant: small-caps;
 }
-#journalLayout table {
-	font-size: 0.7em;
-}
 
 // double publisher trick
 @if $double-publisher == true {
@@ -1039,5 +1036,17 @@ table.listing td.endseparator, table.info td.endseparator {
 	overflow: auto;
 }
 
+/* backend improvements */
+#journalLayout table {
+	font-size: 0.7em;
+}
+ul.steplist {
+	margin-bottom: 1em;
+}
+#submissions table.listing, #reviewers table.listing {
+	display: block;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
 
 @include customizations;
