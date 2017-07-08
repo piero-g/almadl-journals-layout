@@ -14,7 +14,7 @@
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
 * https://github.com/piero-g/almadl-journals-layout
-* Based on version 0.9.9-5 | Subversion n.: #{$subversion}
+* Based on version 0.9.9-6 | Subversion n.: #{$subversion}
 *
 */
 
@@ -210,8 +210,9 @@ h1, h2, #articleTitle h3 {
 	}
 	#rightSidebar {
 		display: block;
-		margin-left: 1%;
+		margin-left: 0.5%;
 		margin-right: 2%;
+		padding-left: 0.5%;
 		width: 20%;
 	}
 }
@@ -221,8 +222,9 @@ h1, h2, #articleTitle h3 {
 		width: 63%;
 	}
 	#rightSidebar {
-		margin-left: 2%;
+		margin-left: 1%;
 		margin-right: 10%;
+		padding-left: 1%;
 		width: 14%;
 	}
 }
