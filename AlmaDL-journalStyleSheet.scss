@@ -14,7 +14,7 @@
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
 * https://github.com/piero-g/almadl-journals-layout
-* Based on version 0.9.9-4 | Subversion n.: #{$subversion}
+* Based on version 0.9.9-5 | Subversion n.: #{$subversion}
 *
 */
 
@@ -706,31 +706,46 @@ table.announcements td.more {
 	@media (min-width: $break-column) { // could be optimized
 		#announcementsHome {
 			float: right;
-			margin-left: 5%;
-			margin-bottom: 2em;
-			max-height: 400px;
+			margin: 0 0 2em 5%;
+			max-height: 300px;
 			overflow: auto;
 			padding: 9px 1%;
 			width: 38%;
 		}
-		/* seems too easy */ // #currentHome selectors are for custom javascript in home
-		#announcementsHome ~ table.tocArticle, #currentHome table.tocArticle {
-			width: auto;
-		}
-		#announcementsHome ~ table.tocArticle td, #currentHome table.tocArticle td {
-			display: table-cell;
-		}
-		table.tocArticle ~ div.separator {
-			overflow: hidden;
-			width: auto;
-		}
-		@if $issue-cover-main == true {
-			/* when Cover in home */ // #currentHome selectors are for custom javascript in home
-			#announcementsHome ~ #issueCoverImage, #announcementsHome ~ #issueCoverDescription,
-			#currentHome #issueCoverImage, #currentHome #issueCoverDescription {
+		// variable defined for backward compatibility
+		$announcements-box-top: false !default;
+		@if $announcements-box-top {
+			/* announcementsHome box stays on top */
+			#additionalHomeContent {
+				float: left;
 				width: 55%;
 			}
-		} @else { }
+			#currentHome, #additionalHomeContent ~ h3:first-of-type {
+				display: block;
+				overflow: auto;
+				padding-top: 2em;
+				width: 100%;
+			}
+		 } @else {
+			/* seems too easy */ // #currentHome selectors are for custom javascript in home
+			#announcementsHome ~ table.tocArticle, #currentHome table.tocArticle {
+				width: auto;
+			}
+			#announcementsHome ~ table.tocArticle td, #currentHome table.tocArticle td {
+				display: table-cell;
+			}
+			table.tocArticle ~ div.separator {
+				overflow: hidden;
+				width: auto;
+			}
+			@if $issue-cover-main == true {
+				/* when Cover in home */ // #currentHome selectors are for custom javascript in home
+				#announcementsHome ~ #issueCoverImage, #announcementsHome ~ #issueCoverDescription,
+				#currentHome #issueCoverImage, #currentHome #issueCoverDescription {
+					width: 55%;
+				}
+			} @else { }
+		}
 	}
 } @else { }
 
