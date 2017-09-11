@@ -14,19 +14,21 @@
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
 * https://github.com/piero-g/almadl-journals-layout
-* Based on version 0.9.9-7 | Subversion n.: #{$subversion}
+* Based on version 0.9.9-8 | Subversion n.: #{$subversion}
 *
 */
 
 // breakpoints!
-$break-small:	26.75em; // 428px - below this resolution the sidebar does not display
-$break-medium:	48.00em; // 768px - below this: reduced lateral spacing
-$break-touch:	64.00em; // 1024px - below this: link spacing for touchpad
-$break-column:	85.00em; // 1360px (was 80.00em) - plenty of space: text in double column/boxed announcementsHome
+$break-small:   26.75em; // 428px - below this resolution the sidebar does not display
+$break-medium:  48.00em; // 768px - below this: reduced lateral spacing
+$break-touch:   64.00em; // 1024px - below this: link spacing for touchpad
+$break-column:  85.00em; // 1360px (was 80.00em) - plenty of space: text in double column/boxed announcementsHome
 
 // default values for backward compatibility
 $clear-color:	#E2E2E2 !default;
 $announcements-box-top: false !default;
+$header-max-width: 700px !default;
+$header-padding: 0 !default;
 
 html, body {
 	height: 100%;
@@ -78,7 +80,7 @@ p {
 } @else {
 	@media (min-width: $break-medium) {
 		#headerTitle {
-			padding: 0;
+			padding: $header-padding 0;
 		}
 	}
 }
@@ -133,7 +135,7 @@ p {
 	@media (min-width: $break-medium) {
 		#header h1 img {
 			/* based on img size */
-			max-width: 700px;
+			max-width: $header-max-width;
 			/* based on img size, usually a good value */
 			width: 50%;
 		}

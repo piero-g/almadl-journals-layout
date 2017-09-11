@@ -1,9 +1,0 @@
-# EditorConfig:: http://EditorConfig.org
-
-# top-most EditorConfig file
-root = true
-
-# Fix indent_size
-[*]
-indent_style = space
-indent_size = 4

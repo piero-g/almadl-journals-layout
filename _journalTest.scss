@@ -3,9 +3,9 @@
 // make (and invoke) a specific file for each journal;
 
 // Main Settings
-$journal-title:			Test Title;	// please avoid special characters
-$subversion:			0;			// a subversion number if you need to keep track of changes on your journal style
-$no-publication:		false;		// IMPORTANT: set to "true" ONLY if the journal hasn't published (yet) but you still need to go online, and remember to set again to "false" sligthly before publishing. Announcements are not considered a publication.
+$journal-title:   Test Title; // please avoid special characters
+$subversion:      0;          // a subversion number if you need to keep track of changes on your journal style
+$no-publication:  false;      // IMPORTANT: set to "true" ONLY if the journal hasn't published (yet) but you still need to go online, and remember to set again to "false" sligthly before publishing. Announcements are not considered a publication.
 
 
 // import Google Fonts (or insert here the code to import your fonts)
@@ -14,56 +14,60 @@ $no-publication:		false;		// IMPORTANT: set to "true" ONLY if the journal hasn't
 
 
 // Fonts Definitions
-$font-titles:			'Roboto Slab', serif !important;
-$font-body:				'Open Sans', sans-serif;
-$font-content-size:		0.9em;		// if a smaller font is used, consider changing this to 1em
-$justified-text:		false;		// if true all appropriate text will be justified except for smaller screens; let "false" to left-align
+$font-titles:       'Roboto Slab', serif !important; // if 'serif' the !important is required
+$font-body:         'Open Sans', sans-serif;
+$font-content-size: 0.9em;    // if a smaller font is used, consider changing this to 1em
+$justified-text:    false;    // if true all appropriate text will be justified except for smaller screens; let "false" to left-align
 
 
 // Colors Definitions
-$body-color:			#ffffff;	// background body color
-$font-color:			#575756;	// font color of body etc
-$a-color:				#A63642;	// main theme color for links
-$header-color:			$a-color;
+$body-color:    #ffffff;  // background body color
+$font-color:    #575756;  // font color of body etc
+$a-color:       #A63642;  // main theme color for links
+$header-color:  $a-color;
 // background header color, you can choose to use $a-color (default) or $body-color or you can set a custom color
 
 // Secondary (optional) Colors
-$header-font-color:		null;		// if not defined it will use $a-color (if $header-color == $body-color) or else $body-color
-$a-hoover-color:		null;		// for a:hover and a:active; if not defined it will use $a-color
-$button-color:			null;		// if not defined it will use $a-color
+$header-font-color: null;   // if not defined it will use $a-color (if $header-color == $body-color) or else $body-color
+$a-hoover-color:    null;   // for a:hover and a:active; if not defined it will use $a-color
+$button-color:      null;   // if not defined it will use $a-color
 
 
 // Header
-$header-centered:		false;		// header centered, could be "true" or "false" (left aligned)
-$header-textual:		true;		// header based on image or text; could be "true" (textual) or "false" (image)
-$header-banner:			false;		// if set to "true" will extend always the header img to full width
+$header-centered:   false;  // header centered, could be "true" or "false" (left aligned)
+$header-textual:    true;   // header based on image or text; could be "true" (textual) or "false" (image)
+$header-banner:     false;  // if set to "true" will extend always the header img to full width
+// Header (optional)
+$header-max-width:  700px;  // customizable max width for image in header
+$header-padding:    0;      // custom vertical padding for image in header (check breakpoints!)
 
 // Home
-$home-image:			false;		// if set to "true" will load the rules for an image in home (with caption); see Readme for HTML
-$no-current-home:		false;		// IMPORTANT: set to "true" if you are NOT including the "current issue" in your homepage
+$home-image:        false;  // if set to "true" will load the rules for an image in home (with caption); see Readme for HTML
+$no-current-home:   false;  // IMPORTANT: set to "true" if you are NOT including the "current issue" in your homepage
 
 // Issue Cover
-$issue-cover-main:		false;		// if set to "true" will load the rules for a responsive issue cover before the index
-$issue-cover-archive:	false;		// if set to "true" will load the rules for a responsive issue cover in the archive
-$issue-cover-size:		650px;		// set this value if a bigger cover is provided (please ensure consistency in the cover quality)
+$issue-cover-main:    false;  // if set to "true" will load the rules for a responsive issue cover before the index
+$issue-cover-archive: false;  // if set to "true" will load the rules for a responsive issue cover in the archive
+$issue-cover-size:    650px;  // set this value if a bigger cover is provided (please ensure consistency in the cover quality)
 
 // Workflow
-$only-publication:		false;		// if set to "true" will hide the "workflow schema" and the "Online submissions" links from the "About"
+$only-publication:    false;  // if set to "true" will hide the "workflow schema" and the "Online submissions" links from the "About"
 
 // Publisher and sponsor
-$double-publisher:		false;
+$double-publisher:    false;
 // if set to "true" will hide the "Sponsor" group; that is a useful workaround if you have more than one publisher (and you will list the second one both in the description of the Publisher and as a Sponsoring organization; see Readme for more info
 
-$sponsor:				false;
+$sponsor:      false;
 // if the journal has only publishers (1 or more) but no sponsoring organization or supporting institutions > this is a small fix for you
 
 // Clear Style
-$clear-style:			true;		// if "true" it enables a different style for buttons and forms, more clear and modern; set to "false" to restore the standard OJS style
-$button-border-rad:		12px;		// define the radius of the border for buttons and forms; suggested values are 12px = most rounded corners; 7px; 5px = slightly smooth corners; 0 = squared corners
-$announcements-box-top:	false;		// if enabled the box of the announcementsHome will be on the right of additionalHomeContent, else it will be on the right side of the current TOC
+$clear-style: true;     // if "true" it enables a different style for buttons and forms, more clear and modern; set to "false" to restore the standard OJS style
+$clear-color: #E2E2E2;  // default color for forms & separators; buttons will be 20% darker;
+$button-border-rad:     12px;   // define the radius of the border for buttons and forms; suggested values are 12px = most rounded corners; 7px; 5px = slightly smooth corners; 0 = squared corners
+$announcements-box-top: false;  // if enabled the box of the announcementsHome will be on the right of additionalHomeContent, else it will be on the right side of the current TOC
 
 // Other styles
-$font-awesome:			false;		// if set to true will load font-awesome CSS; loaded by default if $clear-style is also true;
+$font-awesome:          false;  // if set to true will load font-awesome CSS; loaded by default if $clear-style is also true;
 
 
 //
@@ -71,6 +75,6 @@ $font-awesome:			false;		// if set to true will load font-awesome CSS; loaded by
 //
 @mixin customizations {
 	.test {
-		display: none;
+	display: none;
 	}
 }
