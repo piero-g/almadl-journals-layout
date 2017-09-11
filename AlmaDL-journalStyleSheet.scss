@@ -14,7 +14,7 @@
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
 * https://github.com/piero-g/almadl-journals-layout
-* Based on version 0.9.9-6 | Subversion n.: #{$subversion}
+* Based on version 0.9.9-7 | Subversion n.: #{$subversion}
 *
 */
 
@@ -24,13 +24,17 @@ $break-medium:	48.00em; // 768px - below this: reduced lateral spacing
 $break-touch:	64.00em; // 1024px - below this: link spacing for touchpad
 $break-column:	85.00em; // 1360px (was 80.00em) - plenty of space: text in double column/boxed announcementsHome
 
+// default values for backward compatibility
+$clear-color:	#E2E2E2 !default;
+$announcements-box-top: false !default;
+
 html, body {
 	height: 100%;
 }
 body {
 	@if $clear-style == true {
 		/* clear-style: focus on container in higher resolutions */
-		background-color: #B5B5B5;
+		background-color: darken($clear-color, 20%);
 	} @else {
 		background-color: $body-color;
 	}
@@ -600,10 +604,10 @@ input.button {
 		padding: 0.3em 0.5em;
 	}
 	input.textField, input.uploadField, select.selectMenu, textarea.textArea {
-		background-color: #E2E2E2;
+		background-color: $clear-color;
 	}
 	input.button {
-		background-color: #B5B5B5;
+		background-color: darken($clear-color, 20%);
 		color: #000000;
 	}
 	select.selectMenu {
@@ -703,7 +707,7 @@ table.announcements td.more {
 @if $clear-style == true and ($no-current-home != true and $no-publication != true) {
 	/* boxed "announcementsHome" with "clear-style" */
 	#announcementsHome {
-		background-color: #E2E2E2;
+		background-color: $clear-color;
 	}
 	@media (min-width: $break-column) { // could be optimized
 		#announcementsHome {
@@ -714,8 +718,6 @@ table.announcements td.more {
 			padding: 9px 1%;
 			width: 38%;
 		}
-		// variable defined for backward compatibility
-		$announcements-box-top: false !default;
 		@if $announcements-box-top {
 			/* announcementsHome box stays on top */
 			#additionalHomeContent {
@@ -957,7 +959,7 @@ div.identifyType {
 
 /* legible "Search result" and "Metadata" tables (with some awful solutions) */
 table.listing tr.heading td, table.listing td.heading, table.info td.heading {
-	@if $header-font-color != null {
+	@if ($header-font-color != null) and ($header-font-color != $a-color) {
 		background-color: $header-color;
 		color: $header-font-color;
 	} @else if $header-color == $body-color {
@@ -1023,7 +1025,7 @@ table.listing td.endseparator, table.info td.endseparator {
 /* (probably broken) odd and even results separated */
 #results table.listing tr:nth-child(6n+7), #results table.listing tr:nth-child(6n+8),
 #pkp-rt-viewMetadata table.listing tr:nth-child(4n+6) {
-	background-color: #E2E2E2;
+	background-color: $clear-color;
 	color: #000;
 }
 #results table.listing tr[valign="top"] td {
