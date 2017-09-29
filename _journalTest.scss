@@ -66,6 +66,8 @@ $clear-style: true;     // if "true" it enables a different style for buttons an
 $clear-color: #E2E2E2;  // default color for forms & separators; buttons will be 20% darker;
 $button-border-rad:     12px;   // define the radius of the border for buttons and forms; suggested values are 12px = most rounded corners; 7px; 5px = slightly smooth corners; 0 = squared corners
 $announcements-box-top: false;  // if enabled the box of the announcementsHome will be on the right of additionalHomeContent, else it will be on the right side of the current TOC
+$input-focus: $a-color; // color for focus on forms
+$transitions: all 200ms ease-in-out 0s; // transition for buttons, input forms & co
 
 // Other styles
 $font-awesome:          false;  // if set to true will load font-awesome CSS; loaded by default if $clear-style is also true;
