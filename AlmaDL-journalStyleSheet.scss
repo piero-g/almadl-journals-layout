@@ -14,7 +14,7 @@
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
 * https://github.com/piero-g/almadl-journals-layout
-* Based on version 0.9.10 | Subversion n.: #{$subversion}
+* Based on version 0.9.10-1 | Subversion n.: #{$subversion}
 *
 */
 
@@ -1083,6 +1083,39 @@ ul.steplist {
 	display: block;
 	overflow-x: scroll;
 	overflow-y: hidden;
+}
+
+/* galleys link in abstract page */
+#articleFullText a {
+	display: block;
+	margin-bottom: 9px;
+}
+@if $clear-style == true {
+	#articleFullText a {
+		background-color: $a-color;
+		border-radius: $button-border-rad;
+		box-sizing: border-box;
+		color: $body-color;
+		font-weight: bold;
+		padding: 5px;
+		text-align: center;
+		width: 35%;
+	}
+	@media (min-width: $break-touch) {
+		#articleFullText a {
+			margin-bottom: 3px;
+		}
+	}
+	#articleFullText a:hover, #articleFullText a:active {
+		@if $a-hoover-color == null {
+			background-color: darken($clear-color, 20%);
+			color: $font-color;
+		} @else {
+			background-color: $a-hoover-color;
+		}
+		text-decoration: none;
+		transition: $transitions;
+	}
 }
 
 @include customizations;
