@@ -31,6 +31,7 @@ $header-color:  $a-color;
 $header-font-color: null;   // if not defined it will use $a-color (if $header-color == $body-color) or else $body-color
 $a-hoover-color:    null;   // for a:hover and a:active; if not defined it will use $a-color
 $button-color:      null;   // if not defined it will use $a-color
+$table-head:        null;   // if not defined it will use $header-color or $a-color (depending on other combinations)
 
 
 // Header
