@@ -428,8 +428,8 @@ table.tocArticle {
 	}
 }
 
-/* articleTools + authorBios */
-#sidebarRTArticleTools, #sidebarRTAuthorBios {
+/* articleTools + authorBios; WARNING: Sharing is an extra plugin */
+#sidebarRTArticleTools, #sidebarRTAuthorBios, #sidebarRTSharing {
 	/* highlight these elements */
 	border-left: 2px solid $a-color;
 }
