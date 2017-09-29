@@ -42,12 +42,10 @@ body {
 	}
 	color: $font-color;
 	font-family: $font-body;
+	line-height: 1.5;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-titles;
-}
-p {
-	line-height: 1.5;
 }
 
 
@@ -359,13 +357,10 @@ table.tocArticle {
 }
 
 
-// --------
-// REMOVALS
-// --------
+/* ------- *
+* REMOVALS *
+* -------- */
 @if $only-publication == true {
-	/* ------- *
-	* REMOVALS *
-	* -------- */
 	/* hide OJS internal workflow schema */
 	#pkp-about-aboutThisPublishingSystem #content > p:nth-child(2) {
 		display: none;
