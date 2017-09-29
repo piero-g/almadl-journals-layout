@@ -248,8 +248,14 @@ ul.menu {
 		padding: 0;
 	}
 	& a {
+		border-bottom: 2px solid $body-color;
 		line-height: 2.5em;
 		padding: 0.5em 0.75em;
+	}
+	@if $clear-style == true {
+		& a:hover, & a:active {
+			border-bottom: 2px solid $a-color;
+		}
 	}
 }
 @media (min-width: $break-touch) {
@@ -257,7 +263,7 @@ ul.menu {
 		text-align: left;
 		& a {
 			line-height: 1em;
-			padding: 0;
+			padding: 0.5em 0;
 		}
 		& li {
 			padding: 0 1.5em 0 0;
@@ -283,9 +289,16 @@ a:active, a:hover {
 	}
 	text-decoration: underline;
 }
-/* navbar and breadcrumb coherence */
-ul.menu a:active, ul.menu a:hover, #breadcrumb a:active, #breadcrumb a:hover {
-	text-decoration: underline;
+/* navbar and breadcrumb coherence (navbar included only if clear-style == false) */
+a:active, a:hover {
+	#breadcrumb & {
+		text-decoration: underline;
+	}
+	@if $clear-style != true {
+		ul.menu & {
+			text-decoration: underline;
+		}
+	} @else { }
 }
 /* links in paragraphs */
 p a {
