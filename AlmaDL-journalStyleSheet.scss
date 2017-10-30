@@ -32,6 +32,7 @@ $header-padding: 0 !default;
 $table-head: null !default;
 $input-focus: $a-color !default;
 $transitions: all 200ms ease-in-out 0s !default;
+$separator: 1px solid #888888 !default;
 
 html, body {
 	height: 100%;
@@ -628,10 +629,10 @@ input.button {
 		border-top-right-radius: 0;
 	}
 	#navbar, div.separator {
-		border-bottom: 1px solid #888888;
+		border-bottom: $separator;
 	}
 	#content, #footer, table.announcements td.headseparator, table.announcements td.endseparator {
-		border-top: 1px solid #888888;
+		border-top: $separator;
 	}
 	/* UX feedback with input forms */
 	input.textField, input.uploadField, select.selectMenu, textarea.textArea {
