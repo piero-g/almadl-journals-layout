@@ -623,6 +623,7 @@ input.button {
 	}
 	input.textField, input.uploadField, select.selectMenu, textarea.textArea {
 		background-color: $clear-color;
+		margin: 1px;
 	}
 	input.button, input.button.defaultButton:hover, input.button.defaultButton:active {
 		background-color: darken($clear-color, 20%);
@@ -1007,7 +1008,7 @@ table.listing tr.heading td, table.listing td.heading, table.info td.heading {
 		color: $a-color;
 	}
 	/* space between head and first result */
-	border-bottom: 5px solid #fff;
+	border-bottom: 5px solid $body-color;
 	font-weight: bold;
 	text-align: center;
 }
