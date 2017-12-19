@@ -1013,7 +1013,9 @@ table.listing tr.heading td, table.listing td.heading, table.info td.heading {
 	text-align: center;
 }
 table.listing tr.heading a, table.listing tr.heading a:link, table.listing tr.heading a:visited {
-	@if $header-font-color != null {
+	@if $table-head != null {
+		color: $body-color;
+	} @else if ($header-font-color != null) and ($header-font-color != $a-color) {
 		color: $header-font-color;
 	} @else if $header-color == $body-color {
 		color: $body-color;
