@@ -1,0 +1,29 @@
+// WARNING: this is just an example!
+// your actual style will depend on the actual HTML code of your galleys and
+// whether they will have embedded CSS or not
+
+// -------------
+// FULLTEXT HTML
+// -------------
+@mixin html-galley {
+	/* ------------- *
+	 * FULLTEXT HTML *
+	 * ------------- */
+	/* applies only if embedded in OJS */
+	#pkp-common-openJournalSystems {
+		#journal-header, footer #copyright, .author-bio, .meta #abstract, .meta .keywords, .journal-meta  {
+			display: none;
+		}
+		article {
+			padding: 0;
+
+			.front-meta .article-meta {
+				width: 98%;
+			}
+		}
+
+		footer {
+			border-top: 0;
+		}
+	}
+}
