@@ -797,9 +797,13 @@ table.announcements td.more {
 body#pkp-common-openJournalSystems #journalDescription {
 	display: none;
 }
-.small-caps {
+.small-caps, .smallcaps {
 	font-variant: small-caps;
 }
+dd {
+	padding-bottom: 1em;
+}
+
 
 // double publisher trick
 @if $double-publisher == true {
