@@ -35,6 +35,9 @@ $input-focus: $a-color !default;
 $transitions: all 200ms ease-in-out 0s !default;
 $separator: 1px solid #888888 !default;
 $html-galley: false !default;
+$button-border-rad: 3px !default;
+$no-current-home: false !default;
+$no-publication: false !default;
 
 * {
 	box-sizing: border-box;
