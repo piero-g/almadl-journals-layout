@@ -1114,6 +1114,12 @@ ul.steplist {
 	overflow-x: scroll;
 	overflow-y: hidden;
 }
+/* some table separators are useful */
+#metadata #authors {
+	table.data td.separator {
+		border-top: $separator;
+	}
+}
 
 /* galleys link in abstract page */
 #articleFullText a {
