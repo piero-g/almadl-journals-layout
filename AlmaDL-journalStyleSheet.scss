@@ -1033,7 +1033,8 @@ table.listing tr.heading td, table.listing td.heading, table.info td.heading {
 	/* space between head and first result */
 	border-bottom: 5px solid $body-color;
 	font-weight: bold;
-	text-align: center;
+	padding-left: 0.5em;
+	text-align: left;
 }
 table.listing tr.heading a, table.listing tr.heading a:link, table.listing tr.heading a:visited {
 	@if ($table-head != null) and ($table-head-fontcol != null) {
