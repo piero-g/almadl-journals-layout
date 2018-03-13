@@ -890,7 +890,7 @@ a[href*="searchInitial"], a[href*="issuesPage"], a[href*="searchPage"] {
 		text-align: left;
 	}
 	#pkp-search-authorIndex #content a {
-		line-height: 1em;
+		line-height: 1.5em;
 	}
 }
 
@@ -1139,7 +1139,7 @@ ul.steplist {
 	#articleFullText a:hover, #articleFullText a:active {
 		@if $a-hoover-color == null {
 			background-color: darken($clear-color, 20%);
-			color: $font-color;
+			color: #000000;
 		} @else {
 			background-color: $a-hoover-color;
 		}
