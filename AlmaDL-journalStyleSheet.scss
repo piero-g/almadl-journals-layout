@@ -651,6 +651,9 @@ input.button {
 	#navbar, div.separator {
 		border-bottom: $separator;
 	}
+	hr {
+		border: $separator;
+	}
 	#content, #footer, table.announcements td.headseparator, table.announcements td.endseparator {
 		border-top: $separator;
 	}
