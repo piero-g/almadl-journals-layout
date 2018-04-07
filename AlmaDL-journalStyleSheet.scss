@@ -1008,7 +1008,7 @@ a[href*="searchInitial"], a[href*="issuesPage"], a[href*="searchPage"] {
 /* pluginMissing fix */
 #pluginMissing {
 	max-height: 95%;
-	overflow: scroll;
+	overflow: auto;
 }
 
 /* issue DOI (custom) */
@@ -1128,7 +1128,7 @@ ul.steplist {
 }
 #submissions table.listing, #reviewers table.listing, #pkp-user-userHome table.info {
 	display: block;
-	overflow-x: scroll;
+	overflow-x: auto;
 	overflow-y: hidden;
 }
 /* some table separators are useful */
