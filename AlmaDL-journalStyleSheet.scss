@@ -1061,26 +1061,29 @@ table.listing tr.heading a, table.listing tr.heading a:link, table.listing tr.he
 	/* link distinction */
 	text-decoration: underline;
 }
-#pkp-navigation-search #results table.listing td[colspan="3"] {
-	/* important to bypass inline style */
-	padding-left: 43% !important;
+#results table.listing td[colspan="3"] {
+	#pkp-navigation-search & {
+		/* important to bypass inline style */
+		padding-left: 43% !important;
+	}
+	#pkp-search-titleIndex &, #pkp-plugins-generic-browse-search-sectionDetails &, #pkp-plugins-generic-browse-search-identifyTypeDetails & {
+		/* important to bypass inline style */
+		padding-left: 28% !important;
+	}
 }
-#pkp-search-titleIndex #results table.listing td[colspan="3"], #pkp-plugins-generic-browse-search-sectionDetails #results table.listing td[colspan="3"] {
-	/* important to bypass inline style */
-	padding-left: 28% !important;
+#results table.listing td.nodata {
+	#pkp-navigation-search &, #pkp-search-titleIndex & {
+		/* important to bypass the style above */
+		padding-left: 0 !important;
+	}
 }
-#pkp-navigation-search #results table.listing td.nodata, #pkp-search-titleIndex #results table.listing td.nodata {
-	/* important to bypass the style above */
-	padding-left: 0 !important;
-}
-table.listing td.separator, table.info td.separator {
-	border-top: 0;
-}
-table.listing td.headseparator, table.info td.headseparator {
-	border-top: 0;
-}
-table.listing td.endseparator, table.info td.endseparator {
-	border-top: 1px solid #000;
+table.listing, table.info {
+	td.separator, td.headseparator {
+		border-top: 0;
+	}
+	td.endseparator {
+		border-top: 1px solid #000;
+	}
 }
 /* align links to abstracts and galleys */
 #results table.listing td[align=right] a {
