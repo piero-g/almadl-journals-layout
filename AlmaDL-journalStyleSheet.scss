@@ -1137,6 +1137,14 @@ ul.steplist {
 		border-top: $separator;
 	}
 }
+/* weird instruction spacing in Announcements backend */
+span.mceEditor ~ br {
+	display: none;
+}
+.instruct {
+	display: block;
+	margin-bottom: 1em;
+}
 
 /* galleys link in abstract page */
 #articleFullText a {
