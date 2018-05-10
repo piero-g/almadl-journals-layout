@@ -1,11 +1,10 @@
 // WARNING: some customization may not apply to the default OJS installation, see Readme
-@import 'journalTest'; 	// edit this line to import your customizations
-
+@import 'journalTest'; 	// edit this line to import your journal customizations
 
 // fontawesome imported only if necessary
 @if $clear-style == true or $font-awesome == true {
-		@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-	} @else { }
+	@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+} @else { }
 
 /*!
 *
@@ -14,31 +13,12 @@
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
 * https://github.com/piero-g/almadl-journals-layout
-* Based on version 0.9.13 | Subversion n.: #{$subversion}
+* Based on version 0.9.14 | Subversion n.: #{$subversion}
 *
 */
 
-// breakpoints!
-$break-small:   26.75em; // 428px - below this resolution the sidebar does not display
-$break-medium:  48.00em; // 768px - below this: reduced lateral spacing
-$break-touch:   64.00em; // 1024px - below this: link spacing for touchpad
-$break-column:  85.00em; // 1360px (was 80.00em) - plenty of space: text in double column/boxed announcementsHome
-
-// default values for backward compatibility
-$clear-color:	#E2E2E2 !default;
-$announcements-box-top: false !default;
-$header-max-width: 700px !default;
-$header-padding: 0 !default;
-$table-head: null !default;
-$table-head-fontcol: null !default;
-$input-focus: $a-color !default;
-$transitions: all 200ms ease-in-out 0s !default;
-$separator: 1px solid #888888 !default;
-$html-galley: false !default;
-$button-border-rad: 3px !default;
-$no-current-home: false !default;
-$no-publication: false !default;
-$justified-text: false !default;
+// load default values (breakpoints, default settings for backward compatibility)
+@import './lib/default';
 
 * {
 	box-sizing: border-box;
