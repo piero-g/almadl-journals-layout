@@ -413,6 +413,13 @@ h4 + table.tocArticle:first-of-type {
 	}
 } @else { }
 
+@if $annual-issue == true {
+	/* annual journal: archive without years */
+	#pkp-archive-archives #issues h3, #pkp-archive-archives #issues .separator {
+		display: none;
+	}
+} @else { }
+
 
 /* ------- *
  * SIDEBAR *
