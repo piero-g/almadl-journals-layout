@@ -22,17 +22,16 @@
 			.front-meta .article-meta {
 				width: 98%;
 			}
-		}
 
-		div.author-block {
-			margin-bottom: 1em;
-		}
+			div.author-block {
+				margin-bottom: 1em;
+			}
 
-		// fix for ugly footnotesref below $break-touch
-		p a {
-			display: inline;
+			// fix for ugly footnotesref below $break-touch
+			p a {
+				display: inline;
+			}
 		}
-	}
 
 		footer {
 			border-top: 0;
