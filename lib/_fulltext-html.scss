@@ -1,6 +1,8 @@
 // WARNING: this is just an example!
 // your actual style will depend on the actual HTML code of your galleys and
 // whether they will have embedded CSS or not
+// for this example we are referring to the output from:
+// https://github.com/piero-g/markdown-workflow
 
 // -------------
 // FULLTEXT HTML
@@ -21,6 +23,16 @@
 				width: 98%;
 			}
 		}
+
+		div.author-block {
+			margin-bottom: 1em;
+		}
+
+		// fix for ugly footnotesref below $break-touch
+		p a {
+			display: inline;
+		}
+	}
 
 		footer {
 			border-top: 0;
