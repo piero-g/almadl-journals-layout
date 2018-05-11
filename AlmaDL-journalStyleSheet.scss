@@ -38,6 +38,16 @@ body {
 	font-family: $font-body;
 	line-height: 1.5;
 }
+@if $clear-style == true {
+	@if $html-identifier == null { } @else {
+		/* fix to body color in html proofreading */
+		body {
+			#{$html-identifier} {
+				background-color: $body-color !important;
+			}
+		}
+	}
+}
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-titles;
 }
