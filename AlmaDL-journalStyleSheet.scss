@@ -493,6 +493,11 @@ h4 + table.tocArticle:first-of-type {
 	}
 }
 
+/* authorBios */
+#sidebarRTAuthorBios .authorBio em~a+br {
+	display: none;
+}
+
 /* mendeley icon (exception to default values) */
 // WARNING: this is not part of the standard OJS installations
 #sidebar .articleToolItem a.mendeleyIcon {
