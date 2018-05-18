@@ -493,6 +493,16 @@ h4 + table.tocArticle:first-of-type {
 	}
 }
 
+/* staticSharing */
+ul.share-buttons {
+	width: 90px;
+}
+@media (min-width: $break-column) {
+	ul.share-buttons {
+		width: 100%;
+	}
+}
+
 /* authorBios */
 #sidebarRTAuthorBios .authorBio em~a+br {
 	display: none;
