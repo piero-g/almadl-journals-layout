@@ -508,7 +508,7 @@ ul.share-buttons {
 }
 
 /* authorBios */
-#sidebarRTAuthorBios .authorBio em~a+br {
+#sidebarRTAuthorBios .authorBio em~a~br:nth-of-type(2) {
 	display: none;
 }
 
