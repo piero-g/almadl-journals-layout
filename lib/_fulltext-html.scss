@@ -1,36 +1,36 @@
-// WARNING: this is just an example!
-// your actual style will depend on the actual HTML code of your galleys and
-// whether they will have embedded CSS or not
-// for this example we are referring to the output from:
-// https://github.com/piero-g/markdown-workflow
-
 // -------------
 // FULLTEXT HTML
 // -------------
+// NB: the style is heavily dependent on the underlying HTML code and your workflow;
+// for this example we are referring to the output from:
+// https://github.com/piero-g/markdown-workflow
+
 @mixin html-galley {
 	/* ------------- *
 	 * FULLTEXT HTML *
 	 * ------------- */
-	/* applies only if embedded in OJS */
-	#pkp-common-openJournalSystems {
+	 /* applies only if embedded in OJS */
+	article {
+
+		#pkp-common-openJournalSystems & {
+			padding: 0;
+		}
+
 		#journal-header, footer #copyright, .author-bio, .meta #abstract, .meta .keywords, .journal-meta  {
 			display: none;
 		}
-		article {
-			padding: 0;
 
-			.front-meta .article-meta {
-				width: 98%;
-			}
+		.front-meta .article-meta {
+			width: 98%;
+		}
 
-			div.author-block {
-				margin-bottom: 1em;
-			}
+		div.author-block {
+			margin-bottom: 1em;
+		}
 
-			// fix for ugly footnotesref below $break-touch
-			p a {
-				display: inline;
-			}
+		// fix for ugly footnotesref below $break-touch
+		p a {
+			display: inline;
 		}
 
 		footer {
