@@ -1,0 +1,34 @@
+// -------------
+// DEFAULT SETTINGS
+// -------------
+// breakpoints!
+$break-small:   26.75em; // 428px - below this resolution the sidebar does not display
+$break-medium:  48.00em; // 768px - below this: reduced lateral spacing
+$break-touch:   64.00em; // 1024px - below this: link spacing for touchpad
+$break-column:  85.00em; // 1360px (was 80.00em) - plenty of space: text in double column/boxed announcementsHome
+
+// default values for backward compatibility, overwritten by journal customizations
+
+// colors and clear-style theme options
+$clear-color:	#E2E2E2 !default;
+$button-border-rad: 3px !default;
+$announcements-box-top: false !default;
+$input-focus: $a-color !default;
+$transitions: all 200ms ease-in-out 0s !default;
+$separator: 1px solid #888888 !default;
+$table-head: null !default;
+$table-head-fontcol: null !default;
+
+// header
+$header-max-width: 700px !default;
+$header-padding: 0 !default;
+
+// other settings
+$no-current-home: false !default;
+$no-publication: false !default;
+$justified-text: false !default;
+$annual-issue: false !default;
+
+// fulltext in html
+$html-galley: false !default;
+$html-identifier: null !default;
