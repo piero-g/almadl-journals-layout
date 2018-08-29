@@ -73,6 +73,10 @@ $transitions: all 200ms ease-in-out 0s; // transition for buttons, input forms &
 $font-awesome:          false;  // if set to true will load font-awesome CSS; loaded by default if $clear-style is also true;
 $annual-issue:          false;  // if set to true will hide the years in archive, for a cleaner issue list (NB: use only if the annual schedule is consistent)
 
+// HTML galleys
+$html-galley:           false; // if true it loads the style for article HTML galleys (in ./lib/_fulltext-html.scss). Warning: these rules are heavily dependent on your specific HTML output
+$html-identifier:       null; //article; // a selector, paired with body, to handle the color of article HTML galleys in proofreading. Used with $clear-style, be careful ("div" will break things)
+
 //
 //	Custom Rules (they will appear at the bottom of the CSS)
 //
