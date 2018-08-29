@@ -386,6 +386,9 @@ h4 + table.tocArticle:first-of-type {
 .tocAuthors {
 	font-style: italic;
 }
+.tocTitle {
+	padding-right: 5px;
+}
 /* multiple galleys */
 .tocGalleys a {
 	clear: right;
