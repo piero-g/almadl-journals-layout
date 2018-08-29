@@ -202,9 +202,20 @@ h1, h2, #articleTitle h3 {
 		}
 	}
 } @else { }
+// font size
 #content {
 	border-top: 1px dotted #000;
-	font-size: $font-content-size;
+	font-size: ($font-content-size + 0.1em);
+}
+@media (min-width: $break-touch) {
+	#content {
+		font-size: ($font-content-size);
+	}
+}
+@media (min-width: $break-column) {
+	#content {
+		font-size: ($font-content-size + 0.1em);
+	}
 }
 /* body responsive */
 #main {
@@ -249,7 +260,7 @@ h1, h2, #articleTitle h3 {
 	border-bottom: 1px dotted #000;
 }
 ul.menu {
-	font-size: 1.2em;
+	font-size: (1.2em + 0.05em);
 	text-align: center;
 	& li {
 		padding: 0;
@@ -267,6 +278,7 @@ ul.menu {
 }
 @media (min-width: $break-touch) {
 	ul.menu {
+		font-size: 1.2em;
 		text-align: left;
 		& a {
 			line-height: 1em;
@@ -275,6 +287,11 @@ ul.menu {
 		& li {
 			padding: 0 1.5em 0 0;
 		}
+	}
+}
+@media (min-width: $break-column) {
+	ul.menu {
+		font-size: (1.2em + 0.05em);
 	}
 }
 
