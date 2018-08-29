@@ -16,7 +16,7 @@
 			padding: 0;
 		}
 
-		#journal-header, footer #copyright, .author-bio, .meta #abstract, .meta .keywords, .journal-meta  {
+		#journal-header, footer #copyright, .author-bio, .meta #abstract, .meta .keywords, .journal-meta, .author-website {
 			display: none;
 		}
 
@@ -33,7 +33,6 @@
 					display: none;
 				}
 				.email-address:before {
-					display: inline-block;
 					font-family: FontAwesome;
 					padding-right: 5px;
 				}
