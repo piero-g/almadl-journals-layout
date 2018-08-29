@@ -1087,10 +1087,8 @@ table.listing tr.heading a, table.listing tr.heading a:link, table.listing tr.he
 		color: $body-color;
 	} @else if ($header-font-color != null) and ($header-font-color != $a-color) {
 		color: $header-font-color;
-	} @else if $header-color == $body-color {
-		color: $body-color;
 	} @else {
-		color: $a-color;
+		color: $body-color;
 	}
 	/* link distinction */
 	text-decoration: underline;
