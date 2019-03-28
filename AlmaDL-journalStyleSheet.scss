@@ -869,6 +869,9 @@ body#pkp-common-openJournalSystems #journalDescription {
 dd {
 	padding-bottom: 1em;
 }
+dt {
+	font-weight: bold;
+}
 
 // double publisher trick
 @if $double-publisher == true {
