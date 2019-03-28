@@ -872,6 +872,21 @@ dd {
 dt {
 	font-weight: bold;
 }
+/* custom text in columns */
+@media (min-width: $break-touch) {
+	.text-column {
+		column-count: 2;
+		column-fill: balance;
+		column-gap: 1em;
+	}
+}
+@media (min-width: $break-column) {
+	.text-column-wide {
+		column-count: 2;
+		column-fill: balance;
+		column-gap: 1em;
+	}
+}
 
 // double publisher trick
 @if $double-publisher == true {
