@@ -56,10 +56,10 @@ $only-publication:    false;  // if set to "true" will hide the "workflow schema
 
 // Publisher and sponsor
 $double-publisher:    false;
-// if set to "true" will hide the "Sponsor" group; that is a useful workaround if you have more than one publisher (and you will list the second one both in the description of the Publisher and as a Sponsoring organization; see Readme for more info
+// if set to "true" will hide the Publisher link; if paired with the option below it will also hide the "Sponsor" group; that is a useful workaround if you have more than one publisher (and you will list the second one both in the description of the Publisher and as a Sponsoring organization; see Readme for more info)
 
-$sponsor:      false;
-// if the journal has only publishers (1 or more) but no sponsoring organization or supporting institutions > this is a small fix for you
+//$sponsor:      false;
+// if the journal has only publishers (1 or more) but no sponsoring organization or supporting institutions > this is a small fix for you, just enable $sponsor: false;
 
 // Clear Style
 $clear-style: true;     // if "true" it enables a different style for buttons and forms, more clear and modern; set to "false" to restore the standard OJS style

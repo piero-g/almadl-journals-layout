@@ -13,7 +13,7 @@
 * License: Creative Commons BY 4.0
 * Author: Piero Grandesso, for AlmaDL Journals - University of Bologna
 * https://github.com/piero-g/almadl-journals-layout
-* Based on version 0.9.16 | Subversion n.: #{$subversion}
+* Based on version 0.9.17 | Subversion n.: #{$subversion}
 *
 */
 
@@ -411,7 +411,7 @@ h4 + table.tocArticle:first-of-type {
 
 
 // ------------
-// FULTEXT HTML
+// FULLTEXT HTML
 // ------------
 @import './lib/fulltext-html';
 @if $html-galley == true {
@@ -896,13 +896,22 @@ dt {
 // double publisher trick
 @if $double-publisher == true {
 	/* fix for double publisher */
-	body#pkp-about-journalSponsorship #publisher p:last-child {
-		display: none;
+	body#pkp-about-journalSponsorship {
+		#publisher p:last-child {
+			display: none;
+		}
+		@if $sponsor == true { } @else {
+			// no sponsor (or hide sponsor)
+			#sponsors, .separator {
+				display: none;
+			}
+		}
 	}
-} @else { }
-@if $sponsor == true { } @else {
-	body#pkp-about-journalSponsorship .separator {
-		display: none;
+} @else {
+	@if $sponsor == true { } @else {
+		body#pkp-about-journalSponsorship .separator {
+			display: none;
+		}
 	}
 }
 
