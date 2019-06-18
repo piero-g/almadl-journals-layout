@@ -258,11 +258,16 @@ h1, h2, #articleTitle h3 {
  * ------ */
 #navbar {
 	border-bottom: 1px dotted #000;
+	// fix messy code: common.css and id duplicates
+	#announcements {
+		width: auto;
+	}
 }
 ul.menu {
 	font-size: (1.2em + 0.05em);
 	text-align: center;
 	& li {
+		display: inline-block;
 		padding: 0;
 	}
 	& a {
